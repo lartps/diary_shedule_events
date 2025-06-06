@@ -3,19 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using static weekly_planer.Program;
 
 namespace weekly_planer
 {
-    class Prog
-    {
-        public static void Main()
-        {
-            //Event e1 = new Event();
-        }
-    }
-
-    public class Event
+    public class MyEvent
     {
         public static int nameCounter_ = 1;
 
@@ -85,7 +78,11 @@ namespace weekly_planer
 
         public int Duration(int startHour, int endHour, int startMin, int endMin)
         {
-            return ((endHour - (startHour + 1)) * 60) + ((60 - startMin) + endMin);
+            int duration = ((endHour - (startHour + 1)) * 60) + ((60 - startMin) + endMin);
+            //if (duration <= 0 || duration < 30) throw new DurationException();
+                
+            return duration;
+
         }
 
         public void Delete()
@@ -94,7 +91,7 @@ namespace weekly_planer
 
         }
 
-        public bool isOverlayed(Event other)
+        public bool isOverlayed(MyEvent other)
         {
 
             int DurationDiffFromStart = Duration(this.startHour, other.startHour, this.startMin, other.startMin);
@@ -110,29 +107,24 @@ namespace weekly_planer
 
             this.Name = NewName;
         }
-        public Event(int? SetStartHour = null, int? SetEndHour = null, int? SetStartMin = null, int? SetEndMin = null, int? SetDay = null, string SetName = null, string SetDescr = "", string SetLoc = "", string SetDet = "")
+        public MyEvent(string SetName, int SetDay, int SetStartHour, int SetStartMin, int SetEndHour, int SetEndMin, string SetDescr = "", string SetLoc = "", string SetDet = "")
         {
             i.Add(SetName);
-            Name = Name ?? SetName;
-
-            Day = Day ?? SetDay;
+            Name = SetName;
+            Day = SetDay;
 
             startHour = SetStartHour;
-            endHour = SetEndHour;
-
             startMin = SetStartMin;
+
+            endHour = SetEndHour;
             endMin = SetEndMin;
 
             i.ReserveTime(this.startHour, this.startMin);
             
-            
             Description = SetDescr;
             Location = SetLoc;
             Details = SetDet;
-            Console.WriteLine($"{SetName}, {SetDay}, {SetStartHour}:{SetStartMin} -- {SetEndHour}:{SetEndMin}, {SetDescr}");
         }
-
-
 
 
     }
@@ -152,7 +144,7 @@ namespace weekly_planer
 
             if (ReservedNames.Contains(name))
             {
-                Console.WriteLine("така назва вже э");
+                //Console.WriteLine("така назва вже э");
                 return;
             }
             
@@ -170,9 +162,8 @@ namespace weekly_planer
             {
                 if (ReservedTime[j, 0] == hour && (ReservedTime[j, 1] == min || ReservedTime[j, 1] == min + 10 || ReservedTime[j, 1] == min + 20))
                 {
-                    Console.WriteLine("this time is reserved for another event");
-                    return;
-                } // error
+                    //throw new ReservedTimeException();
+                }
 
             }
         }
@@ -204,29 +195,22 @@ namespace weekly_planer
 
     public static class CurrentTime
     {
-        public static int setTimeHour { get; set; } = 17;
-        public static int setTimeMin { get; set; } = 0;
-        public static int setTimeDay { get; set; } = 7;
+        public static int setTimeDay { get; private set; } = DateTime.Now.Day;
+        public static int setTimeHour { get; private set; } = DateTime.Now.Hour;
+        public static int setTimeMin { get; private set; } = DateTime.Now.Minute;
 
     }
 
-    class Remainder
-    {
-        int setTimeToNotify = 10;
-        public Remainder(int currentHour, int currentMin)
-        {
-            if (CurrentTime.setTimeMin == currentMin - setTimeToNotify && CurrentTime.setTimeHour == currentHour) 
-            {
-                Console.WriteLine("notify");
-            }
-        }
-
-    }
-
-
-
-
-
-
+    //public class ReservedTimeException : Exception
+    //{
+    //    public new void Message(string error)
+    //    {
+    //        Console.WriteLine("This time is alrady reserved for another event");
+    //    }
+    //}
+    //public class DurationException : ArgumentException
+    //{
+    //    DurationException() : base() { Console.WriteLine("Duration cant be less than atleast 30 min"); }
+    //}
 
 }

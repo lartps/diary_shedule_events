@@ -198,26 +198,35 @@
   <data name="&gt;&gt;searchBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="notifyIcon1.Text" xml:space="preserve">
-    <value>notifyIcon1</value>
-  </data>
-  <data name="notifyIcon1.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <metadata name="toolTipOnEventBlock.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>127, 19</value>
   </metadata>
+  <data name="&gt;&gt;sun.Name" xml:space="preserve">
+    <value>sun</value>
+  </data>
+  <data name="&gt;&gt;sun.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sun.Parent" xml:space="preserve">
+    <value>sunday</value>
+  </data>
+  <data name="&gt;&gt;sun.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="sunday.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="sunday.Location" type="System.Drawing.Point, System.Drawing">
     <value>783, 3</value>
   </data>
+  <data name="sunday.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>133, 0</value>
+  </data>
+  <data name="sunday.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>133, 660</value>
+  </data>
   <data name="sunday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 527</value>
+    <value>133, 660</value>
   </data>
   <data name="sunday.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -240,137 +249,320 @@
   <data name="&gt;&gt;sunday.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="strday.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="sun.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="strday.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="sun.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="sun.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>133, 0</value>
+  </data>
+  <data name="sun.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>133, 641</value>
+  </data>
+  <data name="sun.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 641</value>
+  </data>
+  <data name="sun.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;sun.Name" xml:space="preserve">
+    <value>sun</value>
+  </data>
+  <data name="&gt;&gt;sun.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sun.Parent" xml:space="preserve">
+    <value>sunday</value>
+  </data>
+  <data name="&gt;&gt;sun.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;sat.Name" xml:space="preserve">
+    <value>sat</value>
+  </data>
+  <data name="&gt;&gt;sat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sat.Parent" xml:space="preserve">
+    <value>saturday</value>
+  </data>
+  <data name="&gt;&gt;sat.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="saturday.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="saturday.Location" type="System.Drawing.Point, System.Drawing">
     <value>653, 3</value>
   </data>
-  <data name="strday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 527</value>
+  <data name="saturday.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>124, 0</value>
   </data>
-  <data name="strday.TabIndex" type="System.Int32, mscorlib">
+  <data name="saturday.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>124, 660</value>
+  </data>
+  <data name="saturday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 660</value>
+  </data>
+  <data name="saturday.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="strday.Text" xml:space="preserve">
+  <data name="saturday.Text" xml:space="preserve">
     <value>сб                     07.06</value>
   </data>
-  <data name="strday.ToolTip" xml:space="preserve">
+  <data name="saturday.ToolTip" xml:space="preserve">
     <value>субота, 7 червня, 2025 р.</value>
   </data>
-  <data name="&gt;&gt;strday.Name" xml:space="preserve">
-    <value>strday</value>
+  <data name="&gt;&gt;saturday.Name" xml:space="preserve">
+    <value>saturday</value>
   </data>
-  <data name="&gt;&gt;strday.Type" xml:space="preserve">
+  <data name="&gt;&gt;saturday.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;strday.Parent" xml:space="preserve">
+  <data name="&gt;&gt;saturday.Parent" xml:space="preserve">
     <value>Days_table</value>
   </data>
-  <data name="&gt;&gt;strday.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;saturday.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="fri.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="sat.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="fri.Location" type="System.Drawing.Point, System.Drawing">
-    <value>523, 3</value>
+  <data name="sat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
   </data>
-  <data name="fri.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 527</value>
+  <data name="sat.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>118, 0</value>
   </data>
-  <data name="fri.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="sat.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>118, 641</value>
   </data>
-  <data name="fri.Text" xml:space="preserve">
-    <value>пт                     06.06</value>
+  <data name="sat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 641</value>
   </data>
-  <data name="fri.ToolTip" xml:space="preserve">
-    <value>п'ятниця, 6 червня, 2025 р.</value>
+  <data name="sat.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;sat.Name" xml:space="preserve">
+    <value>sat</value>
+  </data>
+  <data name="&gt;&gt;sat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sat.Parent" xml:space="preserve">
+    <value>saturday</value>
+  </data>
+  <data name="&gt;&gt;sat.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;fri.Name" xml:space="preserve">
     <value>fri</value>
   </data>
   <data name="&gt;&gt;fri.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;fri.Parent" xml:space="preserve">
-    <value>Days_table</value>
+    <value>friday</value>
   </data>
   <data name="&gt;&gt;fri.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>0</value>
   </data>
-  <data name="th.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="friday.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="th.Location" type="System.Drawing.Point, System.Drawing">
-    <value>393, 3</value>
+  <data name="friday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>523, 3</value>
   </data>
-  <data name="th.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 527</value>
+  <data name="friday.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>124, 0</value>
   </data>
-  <data name="th.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="friday.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>124, 660</value>
   </data>
-  <data name="th.Text" xml:space="preserve">
-    <value>чт                      05.06</value>
+  <data name="friday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 660</value>
   </data>
-  <data name="th.ToolTip" xml:space="preserve">
-    <value>четвер, 5 червня, 2025 р.</value>
+  <data name="friday.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;th.Name" xml:space="preserve">
-    <value>th</value>
+  <data name="friday.Text" xml:space="preserve">
+    <value>пт                     06.06</value>
   </data>
-  <data name="&gt;&gt;th.Type" xml:space="preserve">
+  <data name="friday.ToolTip" xml:space="preserve">
+    <value>п'ятниця, 6 червня, 2025 р.</value>
+  </data>
+  <data name="&gt;&gt;friday.Name" xml:space="preserve">
+    <value>friday</value>
+  </data>
+  <data name="&gt;&gt;friday.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;th.Parent" xml:space="preserve">
+  <data name="&gt;&gt;friday.Parent" xml:space="preserve">
     <value>Days_table</value>
   </data>
-  <data name="&gt;&gt;th.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;friday.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="fri.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="fri.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="fri.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>118, 0</value>
+  </data>
+  <data name="fri.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>118, 641</value>
+  </data>
+  <data name="fri.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 641</value>
+  </data>
+  <data name="fri.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;fri.Name" xml:space="preserve">
+    <value>fri</value>
+  </data>
+  <data name="&gt;&gt;fri.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fri.Parent" xml:space="preserve">
+    <value>friday</value>
+  </data>
+  <data name="&gt;&gt;fri.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;thu.Name" xml:space="preserve">
+    <value>thu</value>
+  </data>
+  <data name="&gt;&gt;thu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;thu.Parent" xml:space="preserve">
+    <value>thursday</value>
+  </data>
+  <data name="&gt;&gt;thu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="thursday.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="thursday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>393, 3</value>
+  </data>
+  <data name="thursday.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>124, 0</value>
+  </data>
+  <data name="thursday.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>124, 660</value>
+  </data>
+  <data name="thursday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 660</value>
+  </data>
+  <data name="thursday.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="thursday.Text" xml:space="preserve">
+    <value>чт                      05.06</value>
+  </data>
+  <data name="thursday.ToolTip" xml:space="preserve">
+    <value>четвер, 5 червня, 2025 р.</value>
+  </data>
+  <data name="&gt;&gt;thursday.Name" xml:space="preserve">
+    <value>thursday</value>
+  </data>
+  <data name="&gt;&gt;thursday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;thursday.Parent" xml:space="preserve">
+    <value>Days_table</value>
+  </data>
+  <data name="&gt;&gt;thursday.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
+  <data name="thu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="thu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
   </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+  <data name="thu.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>118, 0</value>
+  </data>
+  <data name="thu.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>118, 641</value>
+  </data>
+  <data name="thu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 641</value>
+  </data>
+  <data name="thu.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;thu.Name" xml:space="preserve">
+    <value>thu</value>
+  </data>
+  <data name="&gt;&gt;thu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;thu.Parent" xml:space="preserve">
+    <value>thursday</value>
+  </data>
+  <data name="&gt;&gt;thu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 29</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
     <value>wed</value>
   </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="wed.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="wed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>263, 3</value>
+    <value>3, 16</value>
+  </data>
+  <data name="wed.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>118, 0</value>
+  </data>
+  <data name="wed.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>118, 641</value>
   </data>
   <data name="wed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 527</value>
+    <value>118, 641</value>
   </data>
   <data name="wed.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="wed.Text" xml:space="preserve">
-    <value>ср                     04.06 </value>
-  </data>
-  <data name="wed.ToolTip" xml:space="preserve">
-    <value>середа, 4 червня, 2025 р.</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;wed.Name" xml:space="preserve">
     <value>wed</value>
   </data>
   <data name="&gt;&gt;wed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;wed.Parent" xml:space="preserve">
-    <value>Days_table</value>
+    <value>wednesday</value>
   </data>
   <data name="&gt;&gt;wed.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="label6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -406,9 +598,57 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>wed</value>
+    <value>wednesday</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="wednesday.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="wednesday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>263, 3</value>
+  </data>
+  <data name="wednesday.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>124, 0</value>
+  </data>
+  <data name="wednesday.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>124, 660</value>
+  </data>
+  <data name="wednesday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 660</value>
+  </data>
+  <data name="wednesday.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="wednesday.Text" xml:space="preserve">
+    <value>ср                     04.06 </value>
+  </data>
+  <data name="wednesday.ToolTip" xml:space="preserve">
+    <value>середа, 4 червня, 2025 р.</value>
+  </data>
+  <data name="&gt;&gt;wednesday.Name" xml:space="preserve">
+    <value>wednesday</value>
+  </data>
+  <data name="&gt;&gt;wednesday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;wednesday.Parent" xml:space="preserve">
+    <value>Days_table</value>
+  </data>
+  <data name="&gt;&gt;wednesday.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tue.Name" xml:space="preserve">
+    <value>tue</value>
+  </data>
+  <data name="&gt;&gt;tue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tue.Parent" xml:space="preserve">
+    <value>tuesday</value>
+  </data>
+  <data name="&gt;&gt;tue.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="&gt;&gt;Event.Name" xml:space="preserve">
@@ -418,40 +658,76 @@
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Event.Parent" xml:space="preserve">
-    <value>tue</value>
+    <value>tuesday</value>
   </data>
   <data name="&gt;&gt;Event.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
+  </data>
+  <data name="tuesday.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tuesday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 3</value>
+  </data>
+  <data name="tuesday.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>124, 0</value>
+  </data>
+  <data name="tuesday.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>124, 660</value>
+  </data>
+  <data name="tuesday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 660</value>
+  </data>
+  <data name="tuesday.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tuesday.Text" xml:space="preserve">
+    <value>вт                     03.06 </value>
+  </data>
+  <data name="tuesday.ToolTip" xml:space="preserve">
+    <value>вівторок, 3 червня, 2025 р.</value>
+  </data>
+  <data name="&gt;&gt;tuesday.Name" xml:space="preserve">
+    <value>tuesday</value>
+  </data>
+  <data name="&gt;&gt;tuesday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tuesday.Parent" xml:space="preserve">
+    <value>Days_table</value>
+  </data>
+  <data name="&gt;&gt;tuesday.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="tue.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="tue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 3</value>
+    <value>3, 16</value>
+  </data>
+  <data name="tue.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>118, 0</value>
+  </data>
+  <data name="tue.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>118, 641</value>
   </data>
   <data name="tue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 527</value>
+    <value>118, 641</value>
   </data>
   <data name="tue.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tue.Text" xml:space="preserve">
-    <value>вт                     03.06 </value>
-  </data>
-  <data name="tue.ToolTip" xml:space="preserve">
-    <value>вівторок, 3 червня, 2025 р.</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;tue.Name" xml:space="preserve">
     <value>tue</value>
   </data>
   <data name="&gt;&gt;tue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tue.Parent" xml:space="preserve">
-    <value>Days_table</value>
+    <value>tuesday</value>
   </data>
   <data name="&gt;&gt;tue.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="Event.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -468,23 +744,11 @@
   <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
-    <value>btnDelete</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
-    <value>Event</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="Event.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 15</value>
   </data>
   <data name="Event.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 0</value>
+    <value>112, 133</value>
   </data>
   <data name="Event.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -496,10 +760,10 @@
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Event.Parent" xml:space="preserve">
-    <value>tue</value>
+    <value>tuesday</value>
   </data>
   <data name="&gt;&gt;Event.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="lblTitle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -534,35 +798,20 @@
   <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="btnDelete.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom</value>
-  </data>
-  <data name="btnDelete.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 9</value>
-  </data>
-  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 4</value>
-  </data>
-  <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
-    <value>btnDelete</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
-    <value>Event</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="monday.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;mon.Name" xml:space="preserve">
+    <value>mon</value>
+  </data>
+  <data name="&gt;&gt;mon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mon.Parent" xml:space="preserve">
+    <value>monday</value>
+  </data>
+  <data name="&gt;&gt;mon.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="monday.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -570,11 +819,17 @@
   <data name="monday.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
+  <data name="monday.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>124, 0</value>
+  </data>
+  <data name="monday.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>124, 660</value>
+  </data>
   <data name="monday.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="monday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 527</value>
+    <value>124, 660</value>
   </data>
   <data name="monday.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -595,6 +850,36 @@
     <value>Days_table</value>
   </data>
   <data name="&gt;&gt;monday.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="mon.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="mon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="mon.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>118, 0</value>
+  </data>
+  <data name="mon.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>118, 641</value>
+  </data>
+  <data name="mon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 641</value>
+  </data>
+  <data name="mon.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mon.Name" xml:space="preserve">
+    <value>mon</value>
+  </data>
+  <data name="&gt;&gt;mon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mon.Parent" xml:space="preserve">
+    <value>monday</value>
+  </data>
+  <data name="&gt;&gt;mon.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="groupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -653,6 +938,9 @@
   </data>
   <data name="findBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="findBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="findBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>148, 12</value>
@@ -717,6 +1005,66 @@
   <data name="groupDays.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
+  <data name="&gt;&gt;Days_table.Name" xml:space="preserve">
+    <value>Days_table</value>
+  </data>
+  <data name="&gt;&gt;Days_table.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Days_table.Parent" xml:space="preserve">
+    <value>groupDays</value>
+  </data>
+  <data name="&gt;&gt;Days_table.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Days_table.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="monday" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tuesday" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="wednesday" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="thursday" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="friday" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="saturday" Row="0" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="sunday" Row="0" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,130,Absolute,130,Absolute,130,Absolute,130,Absolute,130,Absolute,130,Absolute,139" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;timeTable.Name" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;timeTable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timeTable.Parent" xml:space="preserve">
+    <value>groupDays</value>
+  </data>
+  <data name="&gt;&gt;timeTable.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="timeTable.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="label05" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label06" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label07" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label08" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label09" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label10" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label11" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label12" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label13" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label14" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label15" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label16" Row="11" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label17" Row="12" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label18" Row="13" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label19" Row="14" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label20" Row="15" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label21" Row="16" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label22" Row="17" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label23" Row="18" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label00" Row="19" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="groupDays.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 85</value>
+  </data>
+  <data name="groupDays.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1000, 0</value>
+  </data>
+  <data name="groupDays.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1000, 697</value>
+  </data>
+  <data name="groupDays.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="groupDays.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1000, 697</value>
+  </data>
+  <data name="groupDays.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;groupDays.Name" xml:space="preserve">
+    <value>groupDays</value>
+  </data>
+  <data name="&gt;&gt;groupDays.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupDays.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupDays.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="Days_table.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -726,17 +1074,44 @@
   <data name="Days_table.ColumnCount" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
+  <data name="&gt;&gt;monday.Name" xml:space="preserve">
+    <value>monday</value>
+  </data>
+  <data name="&gt;&gt;monday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;monday.Parent" xml:space="preserve">
+    <value>Days_table</value>
+  </data>
+  <data name="&gt;&gt;monday.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tuesday.Name" xml:space="preserve">
+    <value>tuesday</value>
+  </data>
+  <data name="&gt;&gt;tuesday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tuesday.Parent" xml:space="preserve">
+    <value>Days_table</value>
+  </data>
+  <data name="&gt;&gt;tuesday.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="Days_table.Location" type="System.Drawing.Point, System.Drawing">
     <value>71, 21</value>
   </data>
   <data name="Days_table.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
   </data>
+  <data name="Days_table.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>919, 580</value>
+  </data>
   <data name="Days_table.RowCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="Days_table.Size" type="System.Drawing.Size, System.Drawing">
-    <value>919, 533</value>
+    <value>919, 666</value>
   </data>
   <data name="Days_table.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -754,19 +1129,298 @@
     <value>0</value>
   </data>
   <data name="Days_table.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="monday" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tue" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="wed" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="th" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="fri" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="strday" Row="0" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="sunday" Row="0" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,130,Absolute,130,Absolute,130,Absolute,130,Absolute,130,Absolute,130,Absolute,139" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="monday" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tuesday" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="wednesday" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="thursday" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="friday" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="saturday" Row="0" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="sunday" Row="0" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,130,Absolute,130,Absolute,130,Absolute,130,Absolute,130,Absolute,130,Absolute,139" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="timeTable.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+    <value>Top, Left, Right</value>
   </data>
-  <data name="timeTable.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="timeTable.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="timeTable.CellBorderStyle" type="System.Windows.Forms.TableLayoutPanelCellBorderStyle, System.Windows.Forms">
     <value>Single</value>
   </data>
   <data name="timeTable.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;label05.Name" xml:space="preserve">
+    <value>label05</value>
+  </data>
+  <data name="&gt;&gt;label05.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label05.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label05.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label06.Name" xml:space="preserve">
+    <value>label06</value>
+  </data>
+  <data name="&gt;&gt;label06.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label06.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label06.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label07.Name" xml:space="preserve">
+    <value>label07</value>
+  </data>
+  <data name="&gt;&gt;label07.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label07.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label07.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label08.Name" xml:space="preserve">
+    <value>label08</value>
+  </data>
+  <data name="&gt;&gt;label08.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label08.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label08.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label09.Name" xml:space="preserve">
+    <value>label09</value>
+  </data>
+  <data name="&gt;&gt;label09.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label09.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label09.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
+  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;label17.Name" xml:space="preserve">
+    <value>label17</value>
+  </data>
+  <data name="&gt;&gt;label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;label18.Name" xml:space="preserve">
+    <value>label18</value>
+  </data>
+  <data name="&gt;&gt;label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;label19.Name" xml:space="preserve">
+    <value>label19</value>
+  </data>
+  <data name="&gt;&gt;label19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;label20.Name" xml:space="preserve">
+    <value>label20</value>
+  </data>
+  <data name="&gt;&gt;label20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label20.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;label21.Name" xml:space="preserve">
+    <value>label21</value>
+  </data>
+  <data name="&gt;&gt;label21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label21.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;label22.Name" xml:space="preserve">
+    <value>label22</value>
+  </data>
+  <data name="&gt;&gt;label22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label22.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;label23.Name" xml:space="preserve">
+    <value>label23</value>
+  </data>
+  <data name="&gt;&gt;label23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label23.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label23.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;label00.Name" xml:space="preserve">
+    <value>label00</value>
+  </data>
+  <data name="&gt;&gt;label00.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label00.Parent" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;label00.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="timeTable.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8pt</value>
+  </data>
+  <data name="timeTable.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="timeTable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 40</value>
+  </data>
+  <data name="timeTable.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>56, 0</value>
+  </data>
+  <data name="timeTable.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>56, 641</value>
+  </data>
+  <data name="timeTable.RowCount" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="timeTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 641</value>
+  </data>
+  <data name="timeTable.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;timeTable.Name" xml:space="preserve">
+    <value>timeTable</value>
+  </data>
+  <data name="&gt;&gt;timeTable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timeTable.Parent" xml:space="preserve">
+    <value>groupDays</value>
+  </data>
+  <data name="&gt;&gt;timeTable.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="timeTable.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="label05" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label06" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label07" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label08" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label09" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label10" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label11" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label12" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label13" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label14" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label15" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label16" Row="11" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label17" Row="12" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label18" Row="13" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label19" Row="14" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label20" Row="15" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label21" Row="16" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label22" Row="17" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label23" Row="18" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label00" Row="19" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="label05.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -784,7 +1438,7 @@
     <value>4, 1</value>
   </data>
   <data name="label05.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+    <value>48, 31</value>
   </data>
   <data name="label05.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -807,11 +1461,11 @@
   <data name="&gt;&gt;label05.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label06.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
   <data name="label06.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label06.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="label06.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8pt</value>
@@ -820,10 +1474,10 @@
     <value>NoControl</value>
   </data>
   <data name="label06.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
+    <value>4, 33</value>
   </data>
   <data name="label06.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+    <value>48, 31</value>
   </data>
   <data name="label06.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -846,11 +1500,11 @@
   <data name="&gt;&gt;label06.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label07.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
   <data name="label07.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label07.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="label07.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8pt</value>
@@ -859,10 +1513,10 @@
     <value>NoControl</value>
   </data>
   <data name="label07.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 51</value>
+    <value>4, 65</value>
   </data>
   <data name="label07.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+    <value>48, 31</value>
   </data>
   <data name="label07.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -898,10 +1552,10 @@
     <value>NoControl</value>
   </data>
   <data name="label08.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 76</value>
+    <value>4, 97</value>
   </data>
   <data name="label08.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+    <value>48, 31</value>
   </data>
   <data name="label08.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -937,10 +1591,10 @@
     <value>NoControl</value>
   </data>
   <data name="label09.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 101</value>
+    <value>4, 129</value>
   </data>
   <data name="label09.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+    <value>48, 31</value>
   </data>
   <data name="label09.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -963,11 +1617,11 @@
   <data name="&gt;&gt;label09.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label10.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label10.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8pt</value>
@@ -976,10 +1630,10 @@
     <value>NoControl</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 126</value>
+    <value>4, 161</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+    <value>48, 31</value>
   </data>
   <data name="label10.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -1015,10 +1669,10 @@
     <value>NoControl</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 151</value>
+    <value>4, 193</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+    <value>48, 31</value>
   </data>
   <data name="label11.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1041,11 +1695,11 @@
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="label12.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
   <data name="label12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label12.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="label12.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8pt</value>
@@ -1054,10 +1708,10 @@
     <value>NoControl</value>
   </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 176</value>
+    <value>4, 225</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+    <value>48, 31</value>
   </data>
   <data name="label12.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1080,11 +1734,11 @@
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="label13.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
   <data name="label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label13.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="label13.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8pt</value>
@@ -1093,10 +1747,10 @@
     <value>NoControl</value>
   </data>
   <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 201</value>
+    <value>4, 257</value>
   </data>
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+    <value>48, 31</value>
   </data>
   <data name="label13.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1119,11 +1773,11 @@
   <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="label14.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
   <data name="label14.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label14.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="label14.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8pt</value>
@@ -1132,10 +1786,10 @@
     <value>NoControl</value>
   </data>
   <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 226</value>
+    <value>4, 289</value>
   </data>
   <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+    <value>48, 31</value>
   </data>
   <data name="label14.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -1171,10 +1825,10 @@
     <value>NoControl</value>
   </data>
   <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 251</value>
+    <value>4, 321</value>
   </data>
   <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+    <value>48, 31</value>
   </data>
   <data name="label15.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -1197,11 +1851,11 @@
   <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="label16.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
   <data name="label16.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label16.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="label16.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8pt</value>
@@ -1210,10 +1864,10 @@
     <value>NoControl</value>
   </data>
   <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 276</value>
+    <value>4, 353</value>
   </data>
   <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+    <value>48, 31</value>
   </data>
   <data name="label16.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -1236,11 +1890,11 @@
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="label17.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
   <data name="label17.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label17.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="label17.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8pt</value>
@@ -1249,10 +1903,10 @@
     <value>NoControl</value>
   </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 301</value>
+    <value>4, 385</value>
   </data>
   <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+    <value>48, 31</value>
   </data>
   <data name="label17.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -1275,11 +1929,11 @@
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="label18.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
   <data name="label18.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label18.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="label18.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8pt</value>
@@ -1288,10 +1942,10 @@
     <value>NoControl</value>
   </data>
   <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 326</value>
+    <value>4, 417</value>
   </data>
   <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+    <value>48, 31</value>
   </data>
   <data name="label18.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1327,10 +1981,10 @@
     <value>NoControl</value>
   </data>
   <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 351</value>
+    <value>4, 449</value>
   </data>
   <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+    <value>48, 31</value>
   </data>
   <data name="label19.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -1353,11 +2007,11 @@
   <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="label20.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
   <data name="label20.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label20.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="label20.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8pt</value>
@@ -1366,10 +2020,10 @@
     <value>NoControl</value>
   </data>
   <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 376</value>
+    <value>4, 481</value>
   </data>
   <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+    <value>48, 31</value>
   </data>
   <data name="label20.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -1405,10 +2059,10 @@
     <value>NoControl</value>
   </data>
   <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 401</value>
+    <value>4, 513</value>
   </data>
   <data name="label21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+    <value>48, 31</value>
   </data>
   <data name="label21.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -1444,10 +2098,10 @@
     <value>NoControl</value>
   </data>
   <data name="label22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 426</value>
+    <value>4, 545</value>
   </data>
   <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+    <value>48, 31</value>
   </data>
   <data name="label22.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -1483,10 +2137,10 @@
     <value>NoControl</value>
   </data>
   <data name="label23.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 451</value>
+    <value>4, 577</value>
   </data>
   <data name="label23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+    <value>48, 31</value>
   </data>
   <data name="label23.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1519,10 +2173,10 @@
     <value>NoControl</value>
   </data>
   <data name="label00.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 476</value>
+    <value>4, 609</value>
   </data>
   <data name="label00.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 30</value>
+    <value>48, 31</value>
   </data>
   <data name="label00.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1545,72 +2199,6 @@
   <data name="&gt;&gt;label00.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
-  <data name="timeTable.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8pt</value>
-  </data>
-  <data name="timeTable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 39</value>
-  </data>
-  <data name="timeTable.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>56, 0</value>
-  </data>
-  <data name="timeTable.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>56, 507</value>
-  </data>
-  <data name="timeTable.RowCount" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="timeTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 507</value>
-  </data>
-  <data name="timeTable.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;timeTable.Name" xml:space="preserve">
-    <value>timeTable</value>
-  </data>
-  <data name="&gt;&gt;timeTable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;timeTable.Parent" xml:space="preserve">
-    <value>groupDays</value>
-  </data>
-  <data name="&gt;&gt;timeTable.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="timeTable.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="label05" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label06" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label07" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label08" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label09" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label10" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label11" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label12" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label13" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label14" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label15" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label16" Row="11" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label17" Row="12" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label18" Row="13" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label19" Row="14" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label20" Row="15" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label21" Row="16" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label22" Row="17" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label23" Row="18" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label00" Row="19" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5,Percent,5" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="groupDays.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 85</value>
-  </data>
-  <data name="groupDays.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1000, 0</value>
-  </data>
-  <data name="groupDays.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1000, 564</value>
-  </data>
-  <data name="groupDays.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="groupDays.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1000, 564</value>
-  </data>
-  <data name="groupDays.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;groupDays.Name" xml:space="preserve">
-    <value>groupDays</value>
-  </data>
-  <data name="&gt;&gt;groupDays.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupDays.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupDays.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="Timer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -1621,7 +2209,7 @@
     <value>NoControl</value>
   </data>
   <data name="Timer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>301, 683</value>
+    <value>333, 801</value>
   </data>
   <data name="Timer.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
@@ -1653,77 +2241,17 @@
   <data name="groupBox3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;button7.Name" xml:space="preserve">
-    <value>button7</value>
-  </data>
-  <data name="&gt;&gt;button7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button7.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;button7.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;button6.Name" xml:space="preserve">
-    <value>button6</value>
-  </data>
-  <data name="&gt;&gt;button6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button6.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;button4.Name" xml:space="preserve">
-    <value>button4</value>
-  </data>
-  <data name="&gt;&gt;button4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;button5.Name" xml:space="preserve">
-    <value>button5</value>
-  </data>
-  <data name="&gt;&gt;button5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button5.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>740, 655</value>
+    <value>740, 788</value>
   </data>
   <data name="groupBox3.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>272, 0</value>
   </data>
   <data name="groupBox3.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>272, 189</value>
+    <value>272, 202</value>
   </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>272, 189</value>
+    <value>272, 202</value>
   </data>
   <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -1743,14 +2271,23 @@
   <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="button7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="button7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="button7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 145</value>
+    <value>3, 46</value>
+  </data>
+  <data name="button7.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>117, 37</value>
+  </data>
+  <data name="button7.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>117, 37</value>
   </data>
   <data name="button7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 36</value>
+    <value>117, 37</value>
   </data>
   <data name="button7.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -1765,10 +2302,10 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;button7.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+    <value>flowLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;button7.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="button6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -1777,10 +2314,16 @@
     <value>NoControl</value>
   </data>
   <data name="button6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 103</value>
+    <value>126, 46</value>
+  </data>
+  <data name="button6.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>117, 37</value>
+  </data>
+  <data name="button6.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>117, 37</value>
   </data>
   <data name="button6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 36</value>
+    <value>117, 37</value>
   </data>
   <data name="button6.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -1795,10 +2338,10 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;button6.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+    <value>flowLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -1807,10 +2350,16 @@
     <value>NoControl</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 61</value>
+    <value>3, 89</value>
+  </data>
+  <data name="button1.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>117, 37</value>
+  </data>
+  <data name="button1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>117, 37</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 36</value>
+    <value>117, 37</value>
   </data>
   <data name="button1.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -1825,10 +2374,10 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;button1.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+    <value>flowLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="button4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -1837,10 +2386,16 @@
     <value>NoControl</value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>149, 19</value>
+    <value>126, 89</value>
+  </data>
+  <data name="button4.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>117, 37</value>
+  </data>
+  <data name="button4.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>117, 37</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 36</value>
+    <value>117, 37</value>
   </data>
   <data name="button4.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -1855,10 +2410,10 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;button4.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+    <value>flowLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="button5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -1867,10 +2422,16 @@
     <value>NoControl</value>
   </data>
   <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
+    <value>3, 132</value>
+  </data>
+  <data name="button5.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>117, 37</value>
+  </data>
+  <data name="button5.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>117, 37</value>
   </data>
   <data name="button5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 36</value>
+    <value>117, 37</value>
   </data>
   <data name="button5.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -1885,70 +2446,10 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;button5.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+    <value>flowLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="groupBox4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="groupBox4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;button3.Name" xml:space="preserve">
-    <value>button3</value>
-  </data>
-  <data name="&gt;&gt;button3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;button2.Name" xml:space="preserve">
-    <value>button2</value>
-  </data>
-  <data name="&gt;&gt;button2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 655</value>
-  </data>
-  <data name="groupBox4.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>272, 0</value>
-  </data>
-  <data name="groupBox4.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>272, 189</value>
-  </data>
-  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>272, 189</value>
-  </data>
-  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="groupBox4.Text" xml:space="preserve">
-    <value>Перенести</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="button3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -1957,10 +2458,16 @@
     <value>NoControl</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>149, 19</value>
+    <value>126, 3</value>
+  </data>
+  <data name="button3.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>117, 37</value>
+  </data>
+  <data name="button3.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>117, 37</value>
   </data>
   <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 36</value>
+    <value>117, 37</value>
   </data>
   <data name="button3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1975,10 +2482,10 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;button3.Parent" xml:space="preserve">
-    <value>groupBox4</value>
+    <value>flowLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="button2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -1987,10 +2494,16 @@
     <value>NoControl</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
+    <value>3, 3</value>
+  </data>
+  <data name="button2.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>117, 37</value>
+  </data>
+  <data name="button2.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>117, 37</value>
   </data>
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 36</value>
+    <value>117, 37</value>
   </data>
   <data name="button2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2005,10 +2518,10 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;button2.Parent" xml:space="preserve">
-    <value>groupBox4</value>
+    <value>flowLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>582, 22</value>
@@ -2023,7 +2536,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1026, 854</value>
+    <value>1026, 1002</value>
   </data>
   <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom</value>
@@ -2041,7 +2554,7 @@
     <value>0</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>389, 695</value>
+    <value>389, 843</value>
   </data>
   <data name="panel1.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>244, 81</value>
@@ -2066,6 +2579,51 @@
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="groupBox4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Name" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 788</value>
+  </data>
+  <data name="groupBox4.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>272, 0</value>
+  </data>
+  <data name="groupBox4.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>272, 202</value>
+  </data>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>272, 202</value>
+  </data>
+  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>Перенести</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>711, 22</value>
@@ -2162,20 +2720,11 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>1042, 893</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Планувальник</value>
-  </data>
-  <data name="&gt;&gt;notifyIcon1.Name" xml:space="preserve">
-    <value>notifyIcon1</value>
-  </data>
-  <data name="&gt;&gt;notifyIcon1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolTipOnEventBlock.Name" xml:space="preserve">
     <value>toolTipOnEventBlock</value>
@@ -2681,6 +3230,120 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;add_PlusPic.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;button2.Name" xml:space="preserve">
+    <value>button2</value>
+  </data>
+  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;button3.Name" xml:space="preserve">
+    <value>button3</value>
+  </data>
+  <data name="&gt;&gt;button3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;button7.Name" xml:space="preserve">
+    <value>button7</value>
+  </data>
+  <data name="&gt;&gt;button7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button7.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;button7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;button6.Name" xml:space="preserve">
+    <value>button6</value>
+  </data>
+  <data name="&gt;&gt;button6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button6.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;button4.Name" xml:space="preserve">
+    <value>button4</value>
+  </data>
+  <data name="&gt;&gt;button4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;button5.Name" xml:space="preserve">
+    <value>button5</value>
+  </data>
+  <data name="&gt;&gt;button5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button5.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="flowLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="flowLayoutPanel1.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>266, 0</value>
+  </data>
+  <data name="flowLayoutPanel1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>266, 183</value>
+  </data>
+  <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 183</value>
+  </data>
+  <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Name" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
 </root>

@@ -61,26 +61,6 @@ namespace weekly_planer {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap _CAEE0E46_BC96_48C4_A17A_94A7AC826043_ {
-            get {
-                object obj = ResourceManager.GetObject("{CAEE0E46-BC96-48C4-A17A-94A7AC826043}", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap _CAEE0E46_BC96_48C4_A17A_94A7AC826043_1 {
-            get {
-                object obj = ResourceManager.GetObject("{CAEE0E46-BC96-48C4-A17A-94A7AC826043}1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         public static byte[] add {
@@ -91,21 +71,21 @@ namespace weekly_planer {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static byte[] image {
+        public static System.Drawing.Bitmap delete {
             get {
-                object obj = ResourceManager.GetObject("image", resourceCulture);
-                return ((byte[])(obj));
+                object obj = ResourceManager.GetObject("delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        public static byte[] search {
+        public static byte[] image {
             get {
-                object obj = ResourceManager.GetObject("search", resourceCulture);
+                object obj = ResourceManager.GetObject("image", resourceCulture);
                 return ((byte[])(obj));
             }
         }

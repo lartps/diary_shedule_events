@@ -164,6 +164,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon %281%29.ico" />
+    <None Include="Resources\delete3.jpg" />
+    <None Include="Resources\delete2.jpg" />
+    <None Include="Resources\delete1.jpg" />
+    <None Include="Resources\{CAEE0E46-BC96-48C4-A17A-94A7AC826043}1.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

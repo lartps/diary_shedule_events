@@ -22,24 +22,12 @@ namespace weekly_planer
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            var days = new[]
-            {
-                sunday,
-                monday,
-                tuesday,
-                wednesday,
-                thursday,
-                friday,
-                saturday
-            };
-
-            DayOfWeek today = DateTime.Now.DayOfWeek;
-
-            int index = (int)today; // Sunday = 0 ... Saturday = 6
-
-            days[index].BackColor = Color.PaleGoldenrod;
-
-
+            //foreach (var j in ) {
+            //    if (DateTime.Now.Day == j)
+            //    {
+            //        j.BackColor = Color.PaleGoldenrod;
+            //    }
+            //}
             //SetupTable();
 
 
