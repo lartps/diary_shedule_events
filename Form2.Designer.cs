@@ -32,7 +32,7 @@
             this.eventEdit_btn_ok = new System.Windows.Forms.Button();
             this.NameChange = new System.Windows.Forms.TextBox();
             this.DetailsChange = new System.Windows.Forms.RichTextBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorMessage = new System.Windows.Forms.ErrorProvider(this.components);
             this.month_label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.hourStartChange = new System.Windows.Forms.NumericUpDown();
             this.hourEndChange = new System.Windows.Forms.NumericUpDown();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorMessage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minStartChange)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minEndChange)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DayChange)).BeginInit();
@@ -73,7 +73,6 @@
             this.eventEdit_btn_ok.MinimumSize = new System.Drawing.Size(118, 42);
             this.eventEdit_btn_ok.Name = "eventEdit_btn_ok";
             this.eventEdit_btn_ok.Size = new System.Drawing.Size(118, 42);
-            this.eventEdit_btn_ok.TabIndex = 0;
             this.eventEdit_btn_ok.Text = "Готово";
             this.eventEdit_btn_ok.UseVisualStyleBackColor = false;
             this.eventEdit_btn_ok.Click += new System.EventHandler(this.event_edit_btn_ok_Click);
@@ -84,9 +83,9 @@
             this.NameChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NameChange.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.NameChange.Location = new System.Drawing.Point(26, 46);
-            this.NameChange.MaxLength = 16;
+            this.NameChange.MaxLength = 11;
             this.NameChange.Name = "NameChange";
-            this.NameChange.Size = new System.Drawing.Size(222, 35);
+            this.NameChange.Size = new System.Drawing.Size(182, 35);
             this.NameChange.TabIndex = 1;
             this.NameChange.Text = "Справа 1";
             this.NameChange.WordWrap = false;
@@ -104,9 +103,9 @@
             this.DetailsChange.TabIndex = 9;
             this.DetailsChange.Text = "";
             // 
-            // errorProvider1
+            // errorMessage
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.errorMessage.ContainerControl = this;
             // 
             // month_label3
             // 
@@ -156,7 +155,7 @@
             this.DescriptionChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DescriptionChange.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DescriptionChange.Location = new System.Drawing.Point(25, 179);
-            this.DescriptionChange.MaximumSize = new System.Drawing.Size(0, 29);
+            this.DescriptionChange.MaximumSize = new System.Drawing.Size(4, 29);
             this.DescriptionChange.MaxLength = 26;
             this.DescriptionChange.MinimumSize = new System.Drawing.Size(280, 29);
             this.DescriptionChange.Name = "DescriptionChange";
@@ -172,7 +171,7 @@
             this.loc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.loc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.loc.Location = new System.Drawing.Point(26, 245);
-            this.loc.MaximumSize = new System.Drawing.Size(0, 29);
+            this.loc.MaximumSize = new System.Drawing.Size(4, 29);
             this.loc.MaxLength = 26;
             this.loc.MinimumSize = new System.Drawing.Size(280, 29);
             this.loc.Name = "loc";
@@ -371,6 +370,7 @@
             0,
             0,
             0});
+            this.hourEndChange.ValueChanged += new System.EventHandler(this.hourEndChange_ValueChanged);
             // 
             // EventForm
             // 
@@ -405,7 +405,7 @@
             this.Text = "Форма для події";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form2_Paint);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorMessage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minStartChange)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minEndChange)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DayChange)).EndInit();
@@ -417,18 +417,16 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button eventEdit_btn_ok;
-        private System.Windows.Forms.TextBox NameChange;
-        private System.Windows.Forms.NumericUpDown minStartChange;
-        private System.Windows.Forms.NumericUpDown hourEndChange;
-        private System.Windows.Forms.NumericUpDown hourStartChange;
-        private System.Windows.Forms.NumericUpDown DayChange;
-        private System.Windows.Forms.NumericUpDown minEndChange;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.TextBox DescriptionChange;
-        private System.Windows.Forms.TextBox loc;
-        private System.Windows.Forms.RichTextBox DetailsChange;
+        public System.Windows.Forms.TextBox NameChange;
+        public System.Windows.Forms.NumericUpDown minStartChange;
+        public System.Windows.Forms.NumericUpDown hourEndChange;
+        public System.Windows.Forms.NumericUpDown hourStartChange;
+        public System.Windows.Forms.NumericUpDown DayChange;
+        public System.Windows.Forms.NumericUpDown minEndChange;
+        private System.Windows.Forms.ErrorProvider errorMessage;
+        public System.Windows.Forms.TextBox DescriptionChange;
+        public System.Windows.Forms.TextBox loc;
+        public System.Windows.Forms.RichTextBox DetailsChange;
         private System.Windows.Forms.Label month_label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label justText1;
@@ -441,5 +439,6 @@
         private System.Windows.Forms.Label descr_label6;
         private System.Windows.Forms.Label details_label8;
         private System.Windows.Forms.ToolTip toolTip1;
+        public System.Windows.Forms.Button eventEdit_btn_ok;
     }
 }

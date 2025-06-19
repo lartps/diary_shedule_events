@@ -37,22 +37,15 @@ namespace weekly_planer
             this.searchBox = new System.Windows.Forms.TextBox();
             this.toolTipOnEventBlock = new System.Windows.Forms.ToolTip(this.components);
             this.sunday = new System.Windows.Forms.GroupBox();
-            this.sun = new System.Windows.Forms.FlowLayoutPanel();
             this.saturday = new System.Windows.Forms.GroupBox();
-            this.sat = new System.Windows.Forms.FlowLayoutPanel();
             this.friday = new System.Windows.Forms.GroupBox();
-            this.fri = new System.Windows.Forms.FlowLayoutPanel();
             this.thursday = new System.Windows.Forms.GroupBox();
-            this.thu = new System.Windows.Forms.FlowLayoutPanel();
             this.wednesday = new System.Windows.Forms.GroupBox();
-            this.wed = new System.Windows.Forms.FlowLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
             this.tuesday = new System.Windows.Forms.GroupBox();
-            this.tue = new System.Windows.Forms.FlowLayoutPanel();
-            this.Event = new System.Windows.Forms.GroupBox();
-            this.lblTitle = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
             this.monday = new System.Windows.Forms.GroupBox();
-            this.mon = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.findBtn = new System.Windows.Forms.Button();
             this.searchPic = new System.Windows.Forms.PictureBox();
@@ -122,15 +115,13 @@ namespace weekly_planer
             this.add_PlusPic = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.sunday.SuspendLayout();
             this.saturday.SuspendLayout();
             this.friday.SuspendLayout();
             this.thursday.SuspendLayout();
             this.wednesday.SuspendLayout();
-            this.wed.SuspendLayout();
             this.tuesday.SuspendLayout();
-            this.Event.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.monday.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchPic)).BeginInit();
@@ -162,127 +153,95 @@ namespace weekly_planer
             // sunday
             // 
             this.sunday.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.sunday.Controls.Add(this.sun);
             resources.ApplyResources(this.sunday, "sunday");
             this.sunday.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.sunday.Name = "sunday";
             this.sunday.TabStop = false;
             this.toolTipOnEventBlock.SetToolTip(this.sunday, resources.GetString("sunday.ToolTip"));
-            // 
-            // sun
-            // 
-            resources.ApplyResources(this.sun, "sun");
-            this.sun.Name = "sun";
+            
             // 
             // saturday
             // 
             this.saturday.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.saturday.Controls.Add(this.sat);
             resources.ApplyResources(this.saturday, "saturday");
             this.saturday.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.saturday.Name = "saturday";
             this.saturday.TabStop = false;
             this.toolTipOnEventBlock.SetToolTip(this.saturday, resources.GetString("saturday.ToolTip"));
-            // 
-            // sat
-            // 
-            resources.ApplyResources(this.sat, "sat");
-            this.sat.Name = "sat";
+            
             // 
             // friday
             // 
             this.friday.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.friday.Controls.Add(this.fri);
             resources.ApplyResources(this.friday, "friday");
             this.friday.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.friday.Name = "friday";
             this.friday.TabStop = false;
             this.toolTipOnEventBlock.SetToolTip(this.friday, resources.GetString("friday.ToolTip"));
-            // 
-            // fri
-            // 
-            resources.ApplyResources(this.fri, "fri");
-            this.fri.Name = "fri";
+            
             // 
             // thursday
             // 
             this.thursday.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.thursday.Controls.Add(this.thu);
             resources.ApplyResources(this.thursday, "thursday");
             this.thursday.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.thursday.Name = "thursday";
             this.thursday.TabStop = false;
             this.toolTipOnEventBlock.SetToolTip(this.thursday, resources.GetString("thursday.ToolTip"));
-            // 
-            // thu
-            // 
-            resources.ApplyResources(this.thu, "thu");
-            this.thu.Name = "thu";
+            
             // 
             // wednesday
             // 
             this.wednesday.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.wednesday.Controls.Add(this.wed);
-            this.wednesday.Controls.Add(this.label6);
             resources.ApplyResources(this.wednesday, "wednesday");
             this.wednesday.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.wednesday.Name = "wednesday";
             this.wednesday.TabStop = false;
             this.toolTipOnEventBlock.SetToolTip(this.wednesday, resources.GetString("wednesday.ToolTip"));
-            // 
-            // wed
-            // 
-            this.wed.Controls.Add(this.groupBox2);
-            resources.ApplyResources(this.wed, "wed");
-            this.wed.Name = "wed";
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
+            
             // 
             // tuesday
             // 
             this.tuesday.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tuesday.Controls.Add(this.tue);
-            this.tuesday.Controls.Add(this.Event);
+            this.tuesday.Controls.Add(this.panel2);
             resources.ApplyResources(this.tuesday, "tuesday");
             this.tuesday.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tuesday.Name = "tuesday";
             this.tuesday.TabStop = false;
             this.toolTipOnEventBlock.SetToolTip(this.tuesday, resources.GetString("tuesday.ToolTip"));
             // 
-            // tue
+            // panel2
             // 
-            resources.ApplyResources(this.tue, "tue");
-            this.tue.Name = "tue";
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.button8);
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
             // 
-            // Event
+            // label1
             // 
-            resources.ApplyResources(this.Event, "Event");
-            this.Event.Controls.Add(this.lblTitle);
-            this.Event.Name = "Event";
-            this.Event.TabStop = false;
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Name = "label1";
+            this.label1.Text = "FFFF1";
             // 
-            // lblTitle
+            // button8
             // 
-            resources.ApplyResources(this.lblTitle, "lblTitle");
-            this.lblTitle.Name = "lblTitle";
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.button8, "button8");
+            this.button8.ForeColor = System.Drawing.Color.Transparent;
+            this.button8.Image = global::weekly_planer.Resource2.delete2;
+            this.button8.Name = "button8";
+            this.button8.UseVisualStyleBackColor = false;
             // 
             // monday
             // 
             resources.ApplyResources(this.monday, "monday");
             this.monday.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.monday.Controls.Add(this.mon);
             this.monday.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.monday.Name = "monday";
             this.monday.TabStop = false;
             this.toolTipOnEventBlock.SetToolTip(this.monday, resources.GetString("monday.ToolTip"));
-            // 
-            // mon
-            // 
-            resources.ApplyResources(this.mon, "mon");
-            this.mon.Name = "mon";
             // 
             // groupBox1
             // 
@@ -298,6 +257,7 @@ namespace weekly_planer
             resources.ApplyResources(this.findBtn, "findBtn");
             this.findBtn.Name = "findBtn";
             this.findBtn.UseVisualStyleBackColor = true;
+            this.findBtn.Click += new System.EventHandler(this.findBtn_Click);
             // 
             // searchPic
             // 
@@ -711,13 +671,6 @@ namespace weekly_planer
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.Highlight;
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
-            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -740,11 +693,9 @@ namespace weekly_planer
             this.friday.ResumeLayout(false);
             this.thursday.ResumeLayout(false);
             this.wednesday.ResumeLayout(false);
-            this.wednesday.PerformLayout();
-            this.wed.ResumeLayout(false);
             this.tuesday.ResumeLayout(false);
-            this.Event.ResumeLayout(false);
-            this.Event.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.monday.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -804,7 +755,6 @@ namespace weekly_planer
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label08;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label07;
         private System.Windows.Forms.Label label06;
         private System.Windows.Forms.Label label05;
@@ -814,8 +764,6 @@ namespace weekly_planer
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.GroupBox Event;
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.TableLayoutPanel Days_table;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button1;
@@ -851,14 +799,9 @@ namespace weekly_planer
         private System.Windows.Forms.Button button7;
         private GroupBox groupBox4;
         private FlowLayoutPanel flowLayoutPanel1;
-        private FlowLayoutPanel mon;
-        private FlowLayoutPanel sun;
-        private FlowLayoutPanel sat;
-        private FlowLayoutPanel fri;
-        private FlowLayoutPanel thu;
-        private FlowLayoutPanel wed;
-        private FlowLayoutPanel tue;
-        private GroupBox groupBox2;
+        private Panel panel2;
+        private Button button8;
+        public Label label1;
     }
 }
 

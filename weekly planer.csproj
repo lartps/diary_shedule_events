@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>weekly_planer</RootNamespace>
     <AssemblyName>weekly planer</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -93,6 +93,7 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalData.cs" />
     <Compile Include="Interface1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,6 +112,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource2.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\AllEvents.cs" />
+    <Compile Include="TaskManeger.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +167,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon %281%29.ico" />
+    <None Include="Resources\delete5.jpg" />
+    <None Include="Resources\delete4.jpg" />
     <None Include="Resources\delete3.jpg" />
     <None Include="Resources\delete2.jpg" />
     <None Include="Resources\delete1.jpg" />
