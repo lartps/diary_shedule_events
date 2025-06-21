@@ -9,12 +9,32 @@ namespace weekly_planer
 {
     public class GlobalData
     {
-        //private static GlobalData _instance;
-        //public static GlobalData Instance => _instance ??= new GlobalData();
+        static public Validate v1 = new Validate(); // для проверки на неправильное\полное пересечение дел
+        static public List<MyEvent> AllEvents = new List<MyEvent>(); // для сохранения данных по всем делам а потом эту инфу тупо тока сохранять и каждый раз отрисовывать при новом запуске проги
+        static public CurrentTime Current_Time1 = new CurrentTime(); // для отображения текущего времени в проге
 
-        //public EventManager EventManager { get; set; } = new EventManager();
-        //private GlobalData() { } // Закритий конструктор
+        public class CurrentTime
+        {
+            public int setTimeDay { get; set; } = DateTime.Now.Day;
+            public int setTimeHour { get; set; } = DateTime.Now.Hour;
+            public int setTimeMin { get; set; } = DateTime.Now.Minute;
+        }
 
-        Validate v1 = new Validate(); // для проверки на неправильное\полное пересечение дел
+        // public void LoadFromFile(string path)
+        // {
+        // Загрузка задач
+        // }
+
+        // public void SaveToFile(string path)
+        // {
+        // create file to save n load
+        //string json = JsonSerializer.Serialize(Tasks);
+        //File.WriteAllText("tasks.json", json);
+
+        //var tasks = JsonSerializer.Deserialize<List<MyEvent>>(File.ReadAllText("tasks.json"));
+
+        //jobExchangeInstance.DeserializeData("data.txt");
+        //_originalData = File.ReadAllText("data.txt");
+        // }
     }
 }

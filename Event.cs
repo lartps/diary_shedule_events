@@ -4,76 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media.Animation;
 using static weekly_planer.Program;
 
 namespace weekly_planer
 {
     public class MyEvent
     {
-        public static int nameCounter_ = 1;
+        private static int nameCounter_ = 1;
 
-        public string Name { get; private set; } = "Cправа " + nameCounter_++;
+        public string Name { get; set; } = "Cправа " + nameCounter_++;
         public string Description { get; set; } = "";
         public string Details { get; set; } = "";
         public string Location { get; set; } = "";
-        public int Day
-        {
-            get
-            {
-                return CurrentTime.setTimeDay;
-            }
-            set
-            {
-                Day = value;
-            }
-        }
-        public int startHour
-        {
-            get
-            {
-                return CurrentTime.setTimeHour;
-            }
-            set
-            {
-                Form1.v1.IsReserved(Name, Day, value, startMin);
-                startHour = value;
-            }
-        }
-        public int startMin
-        {
-            get
-            {
-                return CurrentTime.setTimeMin;
-            }
-            set
-            {
-                Validate.IsReserved(Name, Day, startHour, value);
-                startMin = value;
-            }
-        }
-        public int endHour
-        {
-            get
-            {
-                return CurrentTime.setTimeHour + 1;
-            }
-            set
-            {
-                endHour = value;
-            }
-        }
-
-        public int endMin
-        {
-            get
-            {
-                return CurrentTime.setTimeMin + 30;
-            }
-            set
-            {
-                endMin = value;
-            }
-        }
+        public int Day { get; set; }
+        public int startHour { get; set; }
+        public int startMin { get;set; }
+        public int endHour { get; set; }
+        public int endMin { get; set; }
 
         public int Duration(MyEvent event1)
         {
@@ -82,13 +30,21 @@ namespace weekly_planer
 
             return duration;
         }
+        public int Duration(int startHour, int endHour, int startMin, int endMin)
+        {
+            int duration = ((endHour - (startHour + 1)) * 60) + ((60 - startMin) + endMin);
+            if (duration <= 0 || duration < 30) throw new DurationException();
 
+            return duration;
+        }
+        // удалить из листа всех ивентов, очистить зарезервированные имя и время
         public void Delete(MyEvent event1)
         {
-            // удалить из листа всех ивентов, очистить зарезервированные имя и время
-            Validate.Delete(event1.Name);
-            Form1_Load.AllEvents.Remove(event1);
+
+            GlobalData.v1.Delete(event1.Name);
+            GlobalData.AllEvents.Remove(event1);
         }
+
         // проверка что другой ивент правильно перекрывается с этим ивентом
         public bool isOverlayed(MyEvent other)
         {
@@ -99,14 +55,13 @@ namespace weekly_planer
                 OverlapsedDuration = OverlapsedDuration > 0 ? OverlapsedDuration : (-1) * (OverlapsedDuration);
                 if (DurationDiffFromStart >= 30 && OverlapsedDuration >= 30) return true;
             }
-
             return false;
         }
 
         // изменить имя
         public void Rename(string NewName)
         {
-            Validate.Change(this.Name, NewName);
+            GlobalData.v1.Change(this);
             this.Name = NewName;
         }
         // создать ивент
@@ -121,12 +76,20 @@ namespace weekly_planer
             endHour = SetEndHour;
             endMin = SetEndMin;
 
-            Validate.Reserve(SetName, SetDay, SetStartHour, SetStartMin);
-
             Description = SetDescr;
             Location = SetLoc;
             Details = SetDet;
-            AllEvents.Add(this);
+
+            if (GlobalData.v1.index.Count > 1)
+            {
+                if (GlobalData.v1.IsReserved(this)) // если зарезервировано время или имя, то нельзя создать 
+                {
+                    throw new ReservedTimeException("RES");
+                }
+            }
+
+            GlobalData.v1.Reserve(this);
+            GlobalData.AllEvents.Add(this);
         }
 
 
@@ -134,52 +97,52 @@ namespace weekly_planer
 
     public class Validate
     {
-        static Dictionary<string, string> index = new Dictionary<string, string>(); // индексатор для поиска по имени или времени
+        public Dictionary<string, string> index = new Dictionary<string, string>(); // индексатор для поиска по имени или времени
 
-        public static void Reserve(string name, int day, int startHour, int startMin)
+        public void Reserve(MyEvent e1)
         {
-            index[name] = $"{day} {startHour}:{startMin}";
+            index[e1.Name] = $"{e1.Day} {e1.startHour}:{e1.startMin}";
         }
 
-        public bool IsReserved(string name, int day, int startHour, int startMin)
+        public bool IsReserved(MyEvent e1)
         {
-            if (index.ContainsKey(name))
+            if (index.ContainsKey(e1.Name))
             {
                 throw new ReservedNameException("This name is already reserved, please choose another one");
             }
 
-            // Проверяем все существующие события
-            foreach (var existingEvent in index.Values)
+            // Перевіряємо всі дати які вже є
+            foreach (var existingTime in index.Values)
             {
-                var parts = existingEvent.Split(' ');
+                var parts = existingTime.Split(' ');
                 int existingDay = int.Parse(parts[0]);
-                var timeParts = parts[1].Split(':');
-                int existingHour = int.Parse(timeParts[0]);
-                int existingMin = int.Parse(timeParts[1]);
 
-                // Если это тот же день
-                if (existingDay == day)
+                // Перевіряємо лише події що відбуваються в той же день
+                if (existingDay == e1.Day)
                 {
-                    // Проверяем, не попадает ли новое время в 30-минутный резерв от началасуществующего события
-                    if (startHour == existingHour && (existingMin + 30 < 60))
+                    var timeParts = parts[1].Split(':');
+                    int existingHour = int.Parse(timeParts[0]);
+                    int existingMin = int.Parse(timeParts[1]);
+
+                    // Перевіряємо, щоб новий час не попадав в 30-хвилинний резерв від початку події яка вже є
+                    if (e1.startHour == existingHour && (existingMin + 30 < 60))
                     {
-                        if (startMin == existingMin || existingMin + 30 >= startMin)
-                            throw new ReservedTimeException("This time overlaps with another event's 30-minute reservation period");
+                        if (e1.startMin == existingMin || existingMin + 30 >= e1.startMin)
+                            throw new ReservedTimeException($"This time overlaps with another event's 30-minute reservation period. Event \"{e1.Name}\" at {index[e1.Name]} overlaps with event at {existingTime}");
                     }
 
-                    // Проверяем случай перехода через час
+                    // Перевіряємо випадок переходу через час
                     if (existingMin + 30 >= 59)
                     {
                         int nextMin = (existingMin + 30) % 60;
 
-                        if ((startHour == existingHour + 1 && startMin <= nextMin))
+                        if ((e1.startHour == existingHour + 1 && e1.startMin <= nextMin))
                         {
                             throw new ReservedTimeException("This time overlaps with another event's 30-minute reservation period");
                         }
                     }
                 }
             }
-
             return false;
         }
 
@@ -188,21 +151,21 @@ namespace weekly_planer
             index.Remove(name);
         }
         // изменить время
-        public void Change(string name, int day, int startHour, int startMin, int endHour, int endMin)
+        public void Change(MyEvent e1, int? day = null, int? sHour = null, int? eHour = null, int? sMin = null, int? eMin = null)
         {
-            index[name] = $"{day} {startHour}:{startMin}";
+            day = day ?? e1.Day;
+            sHour = sHour ?? e1.startHour;
+            eHour = eHour ?? e1.endHour;
+            sMin = sMin ?? e1.startMin;
+            eMin = eMin ?? e1.endMin;
+
+            index[e1.Name] = $"{e1.Day} {e1.startHour}:{e1.startMin}";
         }
-        // изменить имя
-        public void Change(string name, string newName)
+        // изменить только имя/оба
+        public void Change(MyEvent e1)
         {
-            index[newName] = index[name];
-            index.Remove(name);
-        }
-        // изменить имя и время
-        public void Change(string name, string newName, int day, int startHour, int startMin, int endHour, int endMin)
-        {
-            index[newName] = $"{day} {startHour}:{startMin}";
-            index.Remove(name);
+            index.Remove(e1.Name);
+            Reserve(e1);
         }
     }
 
@@ -212,30 +175,18 @@ namespace weekly_planer
     }
 
 
-
-
-
-    public static class CurrentTime
-    {
-        public static int setTimeDay { get; private set; } = DateTime.Now.Day;
-        public static int setTimeHour { get; private set; } = DateTime.Now.Hour;
-        public static int setTimeMin { get; private set; } = DateTime.Now.Minute;
-
-    }
-
-
     // Exceptions
     public class ReservedTimeException : Exception
     {
         public ReservedTimeException() : base() { }
 
-        public ReservedTimeException(string message) : base(message) { Console.WriteLine("RES TIME"); }
+        public ReservedTimeException(string message) : base(message) { Console.WriteLine("RES_TIME"); }
     }
     public class DurationException : ArgumentException
     {
         public DurationException() { }
 
-        public DurationException(string message) : base(message) { Console.WriteLine("DURATION ERR"); }
+        public DurationException(string message) : base(message) { Console.WriteLine("DURATION_ERR"); }
 
     }
 
@@ -243,14 +194,14 @@ namespace weekly_planer
     {
         public ReservedNameException() { }
 
-        public ReservedNameException(string message) : base(message) { Console.WriteLine("RES NAME"); }
+        public ReservedNameException(string message) : base(message) { Console.WriteLine("RES_NAME"); }
     }
 
     public class EventsOverlapseException : Exception
     {
         public EventsOverlapseException() { }
 
-        public EventsOverlapseException(string message) : base(message) { Console.WriteLine("OVERLAY ERR"); }
+        public EventsOverlapseException(string message) : base(message) { Console.WriteLine("OVERLAY_ERR"); }
     }
 
 }

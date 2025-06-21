@@ -16,36 +16,11 @@ namespace weekly_planer
         public MainForm()
         {
             InitializeComponent();
-            //Timer.Text = DateTime.Now.ToShortTimeString();
-            //timer1.Start();
-        }
 
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
-            //foreach (var j in ) {
-            //    if (DateTime.Now.Day == j)
-            //    {
-            //        j.BackColor = Color.PaleGoldenrod;
-            //    }
-            //}
-            //SetupTable();
 
-
-            //for (int i = 0; i < timeTable.RowCount; i++)
-            //{
-            //    timeTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30)); // высота строки
-
-            //    Label label = new Label();
-            //    label.Dock = DockStyle.Fill;
-            //    label.TextAlign = ContentAlignment.MiddleCenter;
-
-            //    int hour = startHour + i;
-            //    label.Text = (hour < 10 ? "0" : "") + hour + ":00";
-
-            //    timeTable.Controls.Add(label, 0, i);
-            //}
-
-            // List<Event1> list = new(); // для сохранения данных по всем делам а потом эту инфу тупо тока сохранять и каждый раз отрисовывать при новом запуске проги
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -98,6 +73,7 @@ namespace weekly_planer
         {
             EventForm eventForm1 = new EventForm();
             eventForm1.ShowDialog();
+
         }
 
         private void MainForm_KeyPress(object sender, KeyPressEventArgs e)

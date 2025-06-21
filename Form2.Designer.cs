@@ -73,6 +73,7 @@
             this.eventEdit_btn_ok.MinimumSize = new System.Drawing.Size(118, 42);
             this.eventEdit_btn_ok.Name = "eventEdit_btn_ok";
             this.eventEdit_btn_ok.Size = new System.Drawing.Size(118, 42);
+            this.eventEdit_btn_ok.TabIndex = 18;
             this.eventEdit_btn_ok.Text = "Готово";
             this.eventEdit_btn_ok.UseVisualStyleBackColor = false;
             this.eventEdit_btn_ok.Click += new System.EventHandler(this.event_edit_btn_ok_Click);
@@ -297,13 +298,13 @@
             this.DayChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DayChange.Location = new System.Drawing.Point(27, 117);
             this.DayChange.Maximum = new decimal(new int[] {
-            8,
+            29,
             0,
             0,
             0});
             this.DayChange.MaximumSize = new System.Drawing.Size(45, 0);
             this.DayChange.Minimum = new decimal(new int[] {
-            2,
+            23,
             0,
             0,
             0});
@@ -313,7 +314,7 @@
             this.DayChange.Size = new System.Drawing.Size(45, 29);
             this.DayChange.TabIndex = 2;
             this.DayChange.Value = new decimal(new int[] {
-            2,
+            23,
             0,
             0,
             0});

@@ -23,6 +23,8 @@ namespace weekly_planer
         {
             Timer.Text = DateTime.Now.ToShortTimeString();
             timer1.Start();
+            GlobalData.Current_Time1.setTimeHour = int.Parse(set_TimeH.Text);
+            GlobalData.Current_Time1.setTimeMin = int.Parse(set_TimeM.Text);
 
             var days = new[]
             {
@@ -42,12 +44,6 @@ namespace weekly_planer
             days[index].BackColor = Color.PaleGoldenrod;
 
 
-            //SetupTable();
-
-            DayOfWeek today = DateTime.Now.AddDays(DayChange.Value).DayOfWeek;
-
-
-
             //for (int i = 0; i < timeTable.RowCount; i++)
             //{
             //    timeTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30)); // высота строки
@@ -61,7 +57,6 @@ namespace weekly_planer
 
             //    timeTable.Controls.Add(label, 0, i);
             //}
-
 
         }
 
@@ -109,18 +104,13 @@ namespace weekly_planer
 
             int index = (int)dayOfWeek; // Sunday = 0 ... Saturday = 6
 
-            days_tables[index]. = ;
-
             Panel eventPanel = new Panel
             {
-                Location = new Point(x, y),
+                Location = new Point(3, y),
                 Size = new Size(dayWidth, height),
                 BackColor = Color.LightGray,
                 BorderStyle = BorderStyle.FixedSingle,
-                Name = nameP,
-                Form1.nameP.Controls.Add(Form1.nameL),
-                Form1.nameP.Controls.Add(Form1.nameB),
-                resources.ApplyResources(Form1.nameP, nameP)
+                Name = nameP
             };
 
             Label lbl = new Label
@@ -128,17 +118,13 @@ namespace weekly_planer
                 Text = e1.Name,
                 Dock = DockStyle.Top,
                 Name = nameL,
-                BackColor = Color.Transparent
             };
 
             Button btnDelete = new Button
             {
-                BackColor = Color.Transparent,
                 Name = nameB,
                 Dock = DockStyle.Right,
                 Size = new Size(26, 26),
-                Click += new EventHandler(Form1.nameB_Click),
-                resources.ApplyResources(Form1.nameB, nameB),
                 Image = global::weekly_planer.Resource2.delete2,
                 UseVisualStyleBackColor = false
             };
@@ -146,7 +132,6 @@ namespace weekly_planer
             eventPanel.Controls.Add(lbl);
             eventPanel.Controls.Add(btnDelete);
             days_tables[index].Controls.Add(eventPanel);
-        }
         }
 
 
@@ -187,16 +172,13 @@ namespace weekly_planer
 
         private void Add_Event_Btn_Click(object sender, EventArgs e)
         {
-            EventForm eventForm1 = new EventForm();
-            eventForm1.ShowDialog();
-            if (eventForm1.ShowDialog() == DialogResult.OK)
+            using (EventForm eventForm1 = new EventForm())
             {
-                // add new panel to table
-
-
-
+                if (eventForm1.ShowDialog() == DialogResult.OK && eventForm1.newEvent != null)
+                {
+                    AddPanelToTable(eventForm1.newEvent);
+                }
             }
-
         }
 
         private void MainForm_KeyPress(object sender, KeyPressEventArgs e)
@@ -228,6 +210,13 @@ namespace weekly_planer
 
         }
 
+        private void button9_Click(object sender, EventArgs e)
+        {
+            GlobalData.Current_Time1.setTimeHour = int.Parse(set_TimeH.Text);
+            GlobalData.Current_Time1.setTimeMin = int.Parse(set_TimeM.Text);
+
+        }
+
         //private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         //{
         //    var result = MessageBox.Show("Ви хочете зберегти зміни?", "", MessageBoxButtons.YesNoCancel);
@@ -245,7 +234,6 @@ namespace weekly_planer
         //            break;
         //    }
         //}
-
 
 
 

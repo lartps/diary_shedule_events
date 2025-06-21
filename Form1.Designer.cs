@@ -115,14 +115,11 @@ namespace weekly_planer
             this.add_PlusPic = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.sunday.SuspendLayout();
-            this.saturday.SuspendLayout();
-            this.friday.SuspendLayout();
-            this.thursday.SuspendLayout();
-            this.wednesday.SuspendLayout();
+            this.set_TimeH = new System.Windows.Forms.NumericUpDown();
+            this.set_TimeM = new System.Windows.Forms.NumericUpDown();
+            this.button9 = new System.Windows.Forms.Button();
             this.tuesday.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.monday.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchPic)).BeginInit();
             this.groupDays.SuspendLayout();
@@ -134,6 +131,8 @@ namespace weekly_planer
             ((System.ComponentModel.ISupportInitialize)(this.add_PlusPic)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.set_TimeH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.set_TimeM)).BeginInit();
             this.SuspendLayout();
             // 
             // Add_Event_Btn
@@ -158,7 +157,6 @@ namespace weekly_planer
             this.sunday.Name = "sunday";
             this.sunday.TabStop = false;
             this.toolTipOnEventBlock.SetToolTip(this.sunday, resources.GetString("sunday.ToolTip"));
-            
             // 
             // saturday
             // 
@@ -168,7 +166,6 @@ namespace weekly_planer
             this.saturday.Name = "saturday";
             this.saturday.TabStop = false;
             this.toolTipOnEventBlock.SetToolTip(this.saturday, resources.GetString("saturday.ToolTip"));
-            
             // 
             // friday
             // 
@@ -178,7 +175,6 @@ namespace weekly_planer
             this.friday.Name = "friday";
             this.friday.TabStop = false;
             this.toolTipOnEventBlock.SetToolTip(this.friday, resources.GetString("friday.ToolTip"));
-            
             // 
             // thursday
             // 
@@ -188,7 +184,6 @@ namespace weekly_planer
             this.thursday.Name = "thursday";
             this.thursday.TabStop = false;
             this.toolTipOnEventBlock.SetToolTip(this.thursday, resources.GetString("thursday.ToolTip"));
-            
             // 
             // wednesday
             // 
@@ -198,7 +193,6 @@ namespace weekly_planer
             this.wednesday.Name = "wednesday";
             this.wednesday.TabStop = false;
             this.toolTipOnEventBlock.SetToolTip(this.wednesday, resources.GetString("wednesday.ToolTip"));
-            
             // 
             // tuesday
             // 
@@ -223,7 +217,6 @@ namespace weekly_planer
             resources.ApplyResources(this.label1, "label1");
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Name = "label1";
-            this.label1.Text = "FFFF1";
             // 
             // button8
             // 
@@ -246,6 +239,9 @@ namespace weekly_planer
             // groupBox1
             // 
             resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Controls.Add(this.button9);
+            this.groupBox1.Controls.Add(this.set_TimeM);
+            this.groupBox1.Controls.Add(this.set_TimeH);
             this.groupBox1.Controls.Add(this.findBtn);
             this.groupBox1.Controls.Add(this.searchPic);
             this.groupBox1.Controls.Add(this.searchBox);
@@ -671,6 +667,44 @@ namespace weekly_planer
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
             // 
+            // set_TimeH
+            // 
+            resources.ApplyResources(this.set_TimeH, "set_TimeH");
+            this.set_TimeH.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.set_TimeH.Name = "set_TimeH";
+            this.set_TimeH.ReadOnly = true;
+            this.set_TimeH.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // set_TimeM
+            // 
+            resources.ApplyResources(this.set_TimeM, "set_TimeM");
+            this.set_TimeM.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
+            this.set_TimeM.Name = "set_TimeM";
+            this.set_TimeM.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // button9
+            // 
+            resources.ApplyResources(this.button9, "button9");
+            this.button9.Name = "submit";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -688,15 +722,9 @@ namespace weekly_planer
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainForm_KeyPress);
-            this.sunday.ResumeLayout(false);
-            this.saturday.ResumeLayout(false);
-            this.friday.ResumeLayout(false);
-            this.thursday.ResumeLayout(false);
-            this.wednesday.ResumeLayout(false);
             this.tuesday.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.monday.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchPic)).EndInit();
@@ -713,6 +741,8 @@ namespace weekly_planer
             ((System.ComponentModel.ISupportInitialize)(this.add_PlusPic)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.set_TimeH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.set_TimeM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -802,6 +832,9 @@ namespace weekly_planer
         private Panel panel2;
         private Button button8;
         public Label label1;
+        public NumericUpDown set_TimeM;
+        public NumericUpDown set_TimeH;
+        private Button button9;
     }
 }
 

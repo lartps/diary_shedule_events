@@ -29,27 +29,44 @@ namespace weekly_planer
         public string EventDescr { get; private set; }
         public string EventLoc { get; private set; }
         public string EventDet { get; private set; }
-
-
-
+        public MyEvent newEvent { get; private set; } = null;
         private void Form2_Load(object sender, EventArgs e)
         {
-            DayChange.Value = DateTime.Now.Day;
-            DayChange.Minimum = DayChange.Value;
+            try
+            {
+                DayChange.Value = DateTime.Now.Day;
+                DayChange.Minimum = DayChange.Value;
 
-            hourStartChange.Value = DateTime.Now.Hour;
-            hourEndChange.Value = hourStartChange.Value + 1;
-            hourStartChange.Minimum = hourStartChange.Value;
-            hourEndChange.Minimum = hourStartChange.Value;
+                hourStartChange.Value = DateTime.Now.Hour;
+                hourStartChange.Minimum = hourStartChange.Value;
 
-            minStartChange.Value = DateTime.Now.Minute;
-            minEndChange.Value = minStartChange.Value;
-            minStartChange.Minimum = minStartChange.Value;
+                hourEndChange.Value = hourStartChange.Value + 1;
+                hourEndChange.Minimum = hourStartChange.Value;
 
+                minStartChange.Value = DateTime.Now.Minute;
+                minStartChange.Minimum = minStartChange.Value;
+                minEndChange.Value = minStartChange.Value;
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                // Если возникла ошибка, например, из-за некорректного времени, используем значения из GlobalData
+                if (ex != null)
+                {
+                    hourStartChange.Value = GlobalData.Current_Time1.setTimeHour;
+                    hourStartChange.Minimum = hourStartChange.Value;
 
+                    hourEndChange.Value = hourStartChange.Value + 1;
+                    hourEndChange.Minimum = hourStartChange.Value;
 
-
-
+                    minStartChange.Value = GlobalData.Current_Time1.setTimeMin;
+                    minStartChange.Minimum = minStartChange.Value;
+                    minEndChange.Value = minStartChange.Value;
+                }
+                else
+                {
+                    MessageBox.Show("An unexpected error occurred while loading the form.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
 
         }
 
@@ -102,7 +119,7 @@ namespace weekly_planer
             EventStartMin = (int)minStartChange.Value;
             EventEndMin = (int)minEndChange.Value;
 
-            MyEvent newEvent = null;
+
             try
             {
                 newEvent = new MyEvent(EventName, EventDay, EventStartHour, EventStartMin, EventEndHour, EventEndMin, EventDescr, EventLoc, EventDet);
@@ -112,26 +129,32 @@ namespace weekly_planer
             catch (DurationException ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new DurationException("The event duration must be at least 30 minutes.");
             }
             catch (EventsOverlapseException ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new EventsOverlapseException("The event overlaps with another event.");
             }
             catch (ReservedNameException ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new ReservedNameException("This name is already reserved, please choose another one.");
             }
             catch (ReservedTimeException ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new ReservedTimeException("This time overlaps with another event's 30-minute reservation period. Please choose a different time.");
             }
             catch (ArgumentNullException ex)
             {
                 MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new ArgumentNullException("");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception("An unexpected error occurred while creating the event.");
             }
         }
 
