@@ -16,15 +16,15 @@ namespace weekly_planer
         public MainForm()
         {
             InitializeComponent();
-
+            GlobalData data = new GlobalData();
+            GlobalData.Current_Time1.setTimeHour = int.Parse(set_TimeH.Text);
+            GlobalData.Current_Time1.setTimeMin = int.Parse(set_TimeM.Text);
         }
 
         public void Form1_Load(object sender, EventArgs e)
         {
             Timer.Text = DateTime.Now.ToShortTimeString();
             timer1.Start();
-            GlobalData.Current_Time1.setTimeHour = int.Parse(set_TimeH.Text);
-            GlobalData.Current_Time1.setTimeMin = int.Parse(set_TimeM.Text);
 
             var days = new[]
             {
@@ -74,12 +74,11 @@ namespace weekly_planer
         // Добавляем блок дела на таблицу недели
         public void AddPanelToTable(MyEvent e1)
         {
-
             int hourHeight = 32; // высота одного часа в пикселях
             int dayWidth = 118;  // фиксированая ширина дня
             int duration = e1.Duration(e1);
-            int y = 16 + hourHeight * (e1.startHour - 5);
-            int height = (duration / 60) * hourHeight + ((duration % 60) / 30) * (hourHeight / 2);
+            int y = 16 + hourHeight * (e1.startHour - 4) + ((e1.startMin + 1) / 30) * (hourHeight / 2);
+            int height = (duration / 60) * hourHeight + (((duration + 1) % 60) / 30) * (hourHeight / 2);
 
             string nameP = e1.Name + "_panel";
             string nameL = e1.Name + "_label";
@@ -108,7 +107,7 @@ namespace weekly_planer
             {
                 Location = new Point(3, y),
                 Size = new Size(dayWidth, height),
-                BackColor = Color.LightGray,
+                BackColor = Color.FromArgb(128, Color.LightGray),
                 BorderStyle = BorderStyle.FixedSingle,
                 Name = nameP
             };

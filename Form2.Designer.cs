@@ -330,7 +330,7 @@
             0});
             this.hourStartChange.MaximumSize = new System.Drawing.Size(52, 0);
             this.hourStartChange.Minimum = new decimal(new int[] {
-            5,
+            4,
             0,
             0,
             0});
@@ -340,7 +340,7 @@
             this.hourStartChange.Size = new System.Drawing.Size(52, 29);
             this.hourStartChange.TabIndex = 3;
             this.hourStartChange.Value = new decimal(new int[] {
-            5,
+            4,
             0,
             0,
             0});
@@ -356,7 +356,7 @@
             0});
             this.hourEndChange.MaximumSize = new System.Drawing.Size(52, 0);
             this.hourEndChange.Minimum = new decimal(new int[] {
-            5,
+            4,
             0,
             0,
             0});
@@ -367,7 +367,7 @@
             this.hourEndChange.TabIndex = 5;
             this.toolTip1.SetToolTip(this.hourEndChange, "Подія може тривати 30 хвилин минімум");
             this.hourEndChange.Value = new decimal(new int[] {
-            5,
+            4,
             0,
             0,
             0});
@@ -405,7 +405,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Форма для події";
             this.Load += new System.EventHandler(this.Form2_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form2_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.errorMessage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minStartChange)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minEndChange)).EndInit();

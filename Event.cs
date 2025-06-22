@@ -22,7 +22,25 @@ namespace weekly_planer
         public int startMin { get;set; }
         public int endHour { get; set; }
         public int endMin { get; set; }
+        public int Duration1 { get; set; }
 
+        public MyEvent(string SetName, int SetDay, int SetStartHour, int SetStartMin, int SetEndHour, int SetEndMin, string SetDescr = "", string SetLoc = "", string SetDet = "")
+        {
+            Name = SetName;
+            Day = SetDay;
+
+            startHour = SetStartHour;
+            startMin = SetStartMin;
+
+            endHour = SetEndHour;
+            endMin = SetEndMin;
+
+            Description = SetDescr;
+            Location = SetLoc;
+            Details = SetDet;
+
+            Duration1 = Duration(this);
+        }
         public int Duration(MyEvent event1)
         {
             int duration = ((event1.endHour - (event1.startHour + 1)) * 60) + ((60 - event1.startMin) + event1.endMin);
@@ -51,7 +69,7 @@ namespace weekly_planer
             if (other.Day == this.Day)
             {
                 int DurationDiffFromStart = Duration(this.startHour, other.startHour, this.startMin, other.startMin); // проверка что разница между началом этого ивента и началом другого минмум 30 минут
-                int OverlapsedDuration = Duration(other) - Duration(this); // проверка что перекрытие между этими ивентами минимум 30 минут
+                int OverlapsedDuration = other.Duration1 - this.Duration1; // проверка что перекрытие между этими ивентами минимум 30 минут
                 OverlapsedDuration = OverlapsedDuration > 0 ? OverlapsedDuration : (-1) * (OverlapsedDuration);
                 if (DurationDiffFromStart >= 30 && OverlapsedDuration >= 30) return true;
             }
@@ -65,29 +83,29 @@ namespace weekly_planer
             this.Name = NewName;
         }
         // создать ивент
-        public MyEvent(string SetName, int SetDay, int SetStartHour, int SetStartMin, int SetEndHour, int SetEndMin, string SetDescr = "", string SetLoc = "", string SetDet = "")
+        
+
+        public void Validation()
         {
-            Name = SetName;
-            Day = SetDay;
-
-            startHour = SetStartHour;
-            startMin = SetStartMin;
-
-            endHour = SetEndHour;
-            endMin = SetEndMin;
-
-            Description = SetDescr;
-            Location = SetLoc;
-            Details = SetDet;
-
-            if (GlobalData.v1.index.Count > 1)
+            if (GlobalData.v1.index.Count >= 1)
             {
                 if (GlobalData.v1.IsReserved(this)) // если зарезервировано время или имя, то нельзя создать 
                 {
                     throw new ReservedTimeException("RES");
                 }
+                foreach (var existingEvent in GlobalData.AllEvents)
+                {
+                    // Проверяем только события в тот же день
+                    if (existingEvent.Day == this.Day)
+                    {
+                        // Используем метод isOverlayed для проверки наложения
+                        if (this.isOverlayed(existingEvent))
+                        {
+                            throw new EventsOverlapseException($"Событие \"{this.Name}\" накладывается на событие \"{existingEvent.Name}\" в день {this.Day}");
+                        }
+                    }
+                }
             }
-
             GlobalData.v1.Reserve(this);
             GlobalData.AllEvents.Add(this);
         }
@@ -168,12 +186,6 @@ namespace weekly_planer
             Reserve(e1);
         }
     }
-
-    public class Search
-    {
-
-    }
-
 
     // Exceptions
     public class ReservedTimeException : Exception

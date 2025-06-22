@@ -217,10 +217,10 @@
     <value>7</value>
   </data>
   <data name="sunday.Text" xml:space="preserve">
-    <value>нд                     08.06</value>
+    <value>нд                     29.06</value>
   </data>
   <data name="sunday.ToolTip" xml:space="preserve">
-    <value>неділя, 8 червня, 2025 р.</value>
+    <value>неділя, 29 червня, 2025 р.</value>
   </data>
   <data name="&gt;&gt;sunday.Name" xml:space="preserve">
     <value>sunday</value>
@@ -253,10 +253,10 @@
     <value>6</value>
   </data>
   <data name="saturday.Text" xml:space="preserve">
-    <value>сб                     07.06</value>
+    <value>сб                     28.06</value>
   </data>
   <data name="saturday.ToolTip" xml:space="preserve">
-    <value>субота, 7 червня, 2025 р.</value>
+    <value>субота, 28 червня, 2025 р.</value>
   </data>
   <data name="&gt;&gt;saturday.Name" xml:space="preserve">
     <value>saturday</value>
@@ -289,10 +289,10 @@
     <value>5</value>
   </data>
   <data name="friday.Text" xml:space="preserve">
-    <value>пт                     06.06</value>
+    <value>пт                     27.06</value>
   </data>
   <data name="friday.ToolTip" xml:space="preserve">
-    <value>п'ятниця, 6 червня, 2025 р.</value>
+    <value>п'ятниця, 27 червня, 2025 р.</value>
   </data>
   <data name="&gt;&gt;friday.Name" xml:space="preserve">
     <value>friday</value>
@@ -325,10 +325,10 @@
     <value>4</value>
   </data>
   <data name="thursday.Text" xml:space="preserve">
-    <value>чт                      05.06</value>
+    <value>чт                      26.06</value>
   </data>
   <data name="thursday.ToolTip" xml:space="preserve">
-    <value>четвер, 5 червня, 2025 р.</value>
+    <value>четвер, 26 червня, 2025 р.</value>
   </data>
   <data name="&gt;&gt;thursday.Name" xml:space="preserve">
     <value>thursday</value>
@@ -361,7 +361,7 @@
     <value>3</value>
   </data>
   <data name="wednesday.Text" xml:space="preserve">
-    <value>ср                     04.06 </value>
+    <value>ср                     25.06 </value>
   </data>
   <data name="wednesday.ToolTip" xml:space="preserve">
     <value>середа, 4 червня, 2025 р.</value>
@@ -377,18 +377,6 @@
   </data>
   <data name="&gt;&gt;wednesday.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>tuesday</value>
-  </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="tuesday.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -409,10 +397,10 @@
     <value>2</value>
   </data>
   <data name="tuesday.Text" xml:space="preserve">
-    <value>вт                     03.06 </value>
+    <value>вт                     24.06 </value>
   </data>
   <data name="tuesday.ToolTip" xml:space="preserve">
-    <value>вівторок, 3 червня, 2025 р.</value>
+    <value>вівторок, 24 червня, 2025 р.</value>
   </data>
   <data name="&gt;&gt;tuesday.Name" xml:space="preserve">
     <value>tuesday</value>
@@ -424,114 +412,6 @@
     <value>Days_table</value>
   </data>
   <data name="&gt;&gt;tuesday.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;button8.Name" xml:space="preserve">
-    <value>button8</value>
-  </data>
-  <data name="&gt;&gt;button8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button8.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;button8.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 625</value>
-  </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 32</value>
-  </data>
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>tuesday</value>
-  </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 10</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>FFFF1</value>
-  </data>
-  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="button8.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="button8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 0</value>
-  </data>
-  <data name="button8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 32</value>
-  </data>
-  <data name="button8.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;button8.Name" xml:space="preserve">
-    <value>button8</value>
-  </data>
-  <data name="&gt;&gt;button8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button8.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;button8.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="monday.AutoSize" type="System.Boolean, mscorlib">
@@ -559,10 +439,10 @@
     <value>1</value>
   </data>
   <data name="monday.Text" xml:space="preserve">
-    <value>пн                     02.06 </value>
+    <value>пн                     23.06 </value>
   </data>
   <data name="monday.ToolTip" xml:space="preserve">
-    <value>понеділок, 2 червня, 2025 р.</value>
+    <value>понеділок, 23 червня, 2025 р.</value>
   </data>
   <data name="&gt;&gt;monday.Name" xml:space="preserve">
     <value>monday</value>
@@ -578,6 +458,93 @@
   </data>
   <data name="groupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
+  </data>
+  <data name="&gt;&gt;button9.Name" xml:space="preserve">
+    <value>button9</value>
+  </data>
+  <data name="&gt;&gt;button9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button9.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;button9.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;set_TimeM.Name" xml:space="preserve">
+    <value>set_TimeM</value>
+  </data>
+  <data name="&gt;&gt;set_TimeM.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;set_TimeM.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;set_TimeM.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;set_TimeH.Name" xml:space="preserve">
+    <value>set_TimeH</value>
+  </data>
+  <data name="&gt;&gt;set_TimeH.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;set_TimeH.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;set_TimeH.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;findBtn.Name" xml:space="preserve">
+    <value>findBtn</value>
+  </data>
+  <data name="&gt;&gt;findBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;findBtn.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;findBtn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;searchPic.Name" xml:space="preserve">
+    <value>searchPic</value>
+  </data>
+  <data name="&gt;&gt;searchPic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;searchPic.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;searchPic.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 36</value>
+  </data>
+  <data name="groupBox1.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 49</value>
+  </data>
+  <data name="groupBox1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1000, 49</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1000, 49</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="button9.Location" type="System.Drawing.Point, System.Drawing">
     <value>793, 14</value>
@@ -619,7 +586,7 @@
     <value>52, 29</value>
   </data>
   <data name="set_TimeM.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;set_TimeM.Name" xml:space="preserve">
     <value>set_TimeM</value>
@@ -726,33 +693,6 @@
   <data name="&gt;&gt;searchPic.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 36</value>
-  </data>
-  <data name="groupBox1.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 49</value>
-  </data>
-  <data name="groupBox1.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1000, 49</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1000, 49</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <data name="groupDays.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
   </data>
@@ -835,7 +775,7 @@
     <value>1</value>
   </data>
   <data name="label05.Text" xml:space="preserve">
-    <value>05:00</value>
+    <value>4:00</value>
   </data>
   <data name="label05.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -874,7 +814,7 @@
     <value>2</value>
   </data>
   <data name="label06.Text" xml:space="preserve">
-    <value>06:00</value>
+    <value>5:00</value>
   </data>
   <data name="label06.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -913,7 +853,7 @@
     <value>3</value>
   </data>
   <data name="label07.Text" xml:space="preserve">
-    <value>07:00</value>
+    <value>6:00</value>
   </data>
   <data name="label07.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -952,7 +892,7 @@
     <value>5</value>
   </data>
   <data name="label08.Text" xml:space="preserve">
-    <value>08:00</value>
+    <value>7:00</value>
   </data>
   <data name="label08.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -991,7 +931,7 @@
     <value>14</value>
   </data>
   <data name="label09.Text" xml:space="preserve">
-    <value>09:00</value>
+    <value>8:00</value>
   </data>
   <data name="label09.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1030,7 +970,7 @@
     <value>15</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
-    <value>10:00</value>
+    <value>9:00</value>
   </data>
   <data name="label10.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1069,7 +1009,7 @@
     <value>6</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
-    <value>11:00</value>
+    <value>10:00</value>
   </data>
   <data name="label11.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1108,7 +1048,7 @@
     <value>8</value>
   </data>
   <data name="label12.Text" xml:space="preserve">
-    <value>12:00</value>
+    <value>11:00</value>
   </data>
   <data name="label12.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1147,7 +1087,7 @@
     <value>7</value>
   </data>
   <data name="label13.Text" xml:space="preserve">
-    <value>13:00</value>
+    <value>12:00</value>
   </data>
   <data name="label13.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1186,7 +1126,7 @@
     <value>9</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
-    <value>14:00</value>
+    <value>13:00</value>
   </data>
   <data name="label14.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1225,7 +1165,7 @@
     <value>13</value>
   </data>
   <data name="label15.Text" xml:space="preserve">
-    <value>15:00</value>
+    <value>14:00</value>
   </data>
   <data name="label15.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1264,7 +1204,7 @@
     <value>12</value>
   </data>
   <data name="label16.Text" xml:space="preserve">
-    <value>16:00</value>
+    <value>15:00</value>
   </data>
   <data name="label16.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1303,7 +1243,7 @@
     <value>17</value>
   </data>
   <data name="label17.Text" xml:space="preserve">
-    <value>17:00</value>
+    <value>16:00</value>
   </data>
   <data name="label17.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1342,7 +1282,7 @@
     <value>11</value>
   </data>
   <data name="label18.Text" xml:space="preserve">
-    <value>18:00</value>
+    <value>17:00</value>
   </data>
   <data name="label18.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1381,7 +1321,7 @@
     <value>10</value>
   </data>
   <data name="label19.Text" xml:space="preserve">
-    <value>19:00</value>
+    <value>18:00</value>
   </data>
   <data name="label19.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1420,7 +1360,7 @@
     <value>16</value>
   </data>
   <data name="label20.Text" xml:space="preserve">
-    <value>20:00</value>
+    <value>19:00</value>
   </data>
   <data name="label20.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1459,7 +1399,7 @@
     <value>18</value>
   </data>
   <data name="label21.Text" xml:space="preserve">
-    <value>21:00</value>
+    <value>20:00</value>
   </data>
   <data name="label21.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1498,7 +1438,7 @@
     <value>19</value>
   </data>
   <data name="label22.Text" xml:space="preserve">
-    <value>22:00</value>
+    <value>21:00</value>
   </data>
   <data name="label22.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1537,7 +1477,7 @@
     <value>0</value>
   </data>
   <data name="label23.Text" xml:space="preserve">
-    <value>23:00</value>
+    <value>22:00</value>
   </data>
   <data name="label23.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1573,7 +1513,7 @@
     <value>0</value>
   </data>
   <data name="label00.Text" xml:space="preserve">
-    <value>00:00</value>
+    <value>23:00</value>
   </data>
   <data name="label00.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>

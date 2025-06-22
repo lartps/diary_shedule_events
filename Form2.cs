@@ -34,7 +34,8 @@ namespace weekly_planer
         {
             try
             {
-                DayChange.Value = DateTime.Now.Day;
+                //DayChange.Value = DateTime.Now.Day;
+                DayChange.Value = 23;
                 DayChange.Minimum = DayChange.Value;
 
                 hourStartChange.Value = DateTime.Now.Hour;
@@ -93,15 +94,6 @@ namespace weekly_planer
 
 
 
-
-
-        private void Form2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        // нужно разделить создание нового ивента и ред старого чтоб подставлять предыдущ значения
-        // бмля тут же еще нужно знать какой ивент ред
 
 
 
