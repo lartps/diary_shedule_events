@@ -9,7 +9,7 @@ namespace weekly_planer
 {
     public class GlobalData
     {
-        static public Validate v1 = new Validate(); // для проверки на неправильное\полное пересечение дел
+        static public Validate v1 = new Validate();
         static public List<MyEvent> AllEvents = new List<MyEvent>(); // для сохранения данных по всем делам а потом эту инфу тупо тока сохранять и каждый раз отрисовывать при новом запуске проги
         static public CurrentTime Current_Time1 = new CurrentTime(); // для отображения текущего времени в проге
 

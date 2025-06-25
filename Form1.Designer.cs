@@ -44,7 +44,10 @@ namespace weekly_planer
             this.tuesday = new System.Windows.Forms.GroupBox();
             this.monday = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button9 = new System.Windows.Forms.Button();
+            this.Timer = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.set_TimeD = new System.Windows.Forms.NumericUpDown();
+            this.set_Time = new System.Windows.Forms.Button();
             this.set_TimeM = new System.Windows.Forms.NumericUpDown();
             this.set_TimeH = new System.Windows.Forms.NumericUpDown();
             this.findBtn = new System.Windows.Forms.Button();
@@ -71,15 +74,12 @@ namespace weekly_planer
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.Timer = new System.Windows.Forms.Label();
+            this.label00 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.Overlaps_table = new System.Windows.Forms.FlowLayoutPanel();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -112,22 +112,34 @@ namespace weekly_planer
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.add_PlusPic = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Delay_table = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label00 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.set_TimeD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.set_TimeM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.set_TimeH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchPic)).BeginInit();
             this.groupDays.SuspendLayout();
             this.Days_table.SuspendLayout();
             this.timeTable.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.Overlaps_table.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.add_PlusPic)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.Delay_table.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // Add_Event_Btn
@@ -210,7 +222,10 @@ namespace weekly_planer
             // groupBox1
             // 
             resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Controls.Add(this.button9);
+            this.groupBox1.Controls.Add(this.Timer);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.set_TimeD);
+            this.groupBox1.Controls.Add(this.set_Time);
             this.groupBox1.Controls.Add(this.set_TimeM);
             this.groupBox1.Controls.Add(this.set_TimeH);
             this.groupBox1.Controls.Add(this.findBtn);
@@ -219,12 +234,43 @@ namespace weekly_planer
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
-            // button9
+            // Timer
             // 
-            resources.ApplyResources(this.button9, "button9");
-            this.button9.Name = "button9";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            resources.ApplyResources(this.Timer, "Timer");
+            this.Timer.Name = "Timer";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // set_TimeD
+            // 
+            resources.ApplyResources(this.set_TimeD, "set_TimeD");
+            this.set_TimeD.Maximum = new decimal(new int[] {
+            29,
+            0,
+            0,
+            0});
+            this.set_TimeD.Minimum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.set_TimeD.Name = "set_TimeD";
+            this.set_TimeD.ReadOnly = true;
+            this.set_TimeD.Value = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            // 
+            // set_Time
+            // 
+            resources.ApplyResources(this.set_Time, "set_Time");
+            this.set_Time.Name = "set_Time";
+            this.set_Time.UseVisualStyleBackColor = true;
+            this.set_Time.Click += new System.EventHandler(this.set_Time_Click);
             // 
             // set_TimeM
             // 
@@ -416,46 +462,31 @@ namespace weekly_planer
             resources.ApplyResources(this.label23, "label23");
             this.label23.Name = "label23";
             // 
-            // Timer
+            // label00
             // 
-            resources.ApplyResources(this.Timer, "Timer");
-            this.Timer.Name = "Timer";
+            resources.ApplyResources(this.label00, "label00");
+            this.label00.Name = "label00";
             // 
             // groupBox3
             // 
             resources.ApplyResources(this.groupBox3, "groupBox3");
+            this.groupBox3.Controls.Add(this.Overlaps_table);
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Controls.Add(this.button6);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
-            // button7
+            // Overlaps_table
             // 
-            resources.ApplyResources(this.button7, "button7");
-            this.button7.Name = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            resources.ApplyResources(this.button6, "button6");
-            this.button6.Name = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            resources.ApplyResources(this.button5, "button5");
-            this.button5.Name = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Overlaps_table.Controls.Add(this.button1);
+            this.Overlaps_table.Controls.Add(this.button2);
+            this.Overlaps_table.Controls.Add(this.button5);
+            this.Overlaps_table.Controls.Add(this.button7);
+            this.Overlaps_table.Controls.Add(this.button8);
+            this.Overlaps_table.Controls.Add(this.button9);
+            resources.ApplyResources(this.Overlaps_table, "Overlaps_table");
+            this.Overlaps_table.Name = "Overlaps_table";
             // 
             // button3
             // 
@@ -463,11 +494,17 @@ namespace weekly_planer
             this.button3.Name = "button3";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // button4
             // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.button4, "button4");
+            this.button4.Name = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            resources.ApplyResources(this.button6, "button6");
+            this.button6.Name = "button6";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // errorProvider1
             // 
@@ -652,29 +689,72 @@ namespace weekly_planer
             this.add_PlusPic.Name = "add_PlusPic";
             this.add_PlusPic.TabStop = false;
             // 
-            // flowLayoutPanel1
+            // Delay_table
             // 
-            this.flowLayoutPanel1.Controls.Add(this.button2);
-            this.flowLayoutPanel1.Controls.Add(this.button3);
-            this.flowLayoutPanel1.Controls.Add(this.button7);
-            this.flowLayoutPanel1.Controls.Add(this.button6);
-            this.flowLayoutPanel1.Controls.Add(this.button1);
-            this.flowLayoutPanel1.Controls.Add(this.button4);
-            this.flowLayoutPanel1.Controls.Add(this.button5);
-            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.Delay_table.Controls.Add(this.panel3);
+            resources.ApplyResources(this.Delay_table, "Delay_table");
+            this.Delay_table.Name = "Delay_table";
             // 
             // groupBox4
             // 
             resources.ApplyResources(this.groupBox4, "groupBox4");
-            this.groupBox4.Controls.Add(this.flowLayoutPanel1);
+            this.groupBox4.Controls.Add(this.Delay_table);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
             // 
-            // label00
+            // panel3
             // 
-            resources.ApplyResources(this.label00, "label00");
-            this.label00.Name = "label00";
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label5);
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            resources.ApplyResources(this.button5, "button5");
+            this.button5.Name = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            resources.ApplyResources(this.button7, "button7");
+            this.button7.Name = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            resources.ApplyResources(this.button8, "button8");
+            this.button8.Name = "button8";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            resources.ApplyResources(this.button9, "button9");
+            this.button9.Name = "button9";
+            this.button9.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -682,7 +762,6 @@ namespace weekly_planer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.Timer);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupDays);
@@ -694,6 +773,7 @@ namespace weekly_planer
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainForm_KeyPress);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.set_TimeD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.set_TimeM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.set_TimeH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchPic)).EndInit();
@@ -703,13 +783,17 @@ namespace weekly_planer
             this.Days_table.PerformLayout();
             this.timeTable.ResumeLayout(false);
             this.timeTable.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.Overlaps_table.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.add_PlusPic)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.Delay_table.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -756,13 +840,8 @@ namespace weekly_planer
         private System.Windows.Forms.Label label06;
         private System.Windows.Forms.Label label05;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TableLayoutPanel Days_table;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button findBtn;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
@@ -792,13 +871,26 @@ namespace weekly_planer
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button7;
         private GroupBox groupBox4;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel Delay_table;
         public NumericUpDown set_TimeM;
         public NumericUpDown set_TimeH;
-        private Button button9;
+        private Button set_Time;
         private Label label00;
+        public NumericUpDown set_TimeD;
+        private Label label1;
+        private FlowLayoutPanel Overlaps_table;
+        private Button button4;
+        private Button button6;
+        private Panel panel3;
+        private Label label4;
+        private Label label5;
+        private Button button1;
+        private Button button2;
+        private Button button5;
+        private Button button7;
+        private Button button8;
+        private Button button9;
     }
 }
 

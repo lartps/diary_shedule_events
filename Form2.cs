@@ -34,8 +34,7 @@ namespace weekly_planer
         {
             try
             {
-                //DayChange.Value = DateTime.Now.Day;
-                DayChange.Value = 23;
+                DayChange.Value = DateTime.Now.Day;
                 DayChange.Minimum = DayChange.Value;
 
                 hourStartChange.Value = DateTime.Now.Hour;
@@ -53,6 +52,7 @@ namespace weekly_planer
                 // Если возникла ошибка, например, из-за некорректного времени, используем значения из GlobalData
                 if (ex != null)
                 {
+                    DayChange.Value = GlobalData.Current_Time1.setTimeDay;
                     hourStartChange.Value = GlobalData.Current_Time1.setTimeHour;
                     hourStartChange.Minimum = hourStartChange.Value;
 
@@ -88,7 +88,11 @@ namespace weekly_planer
 
         }
 
-
+        private void hourStartChange_ValueChanged(object sender, EventArgs e)
+        {
+            hourEndChange.Value = hourStartChange.Value + 1;
+            hourEndChange.Minimum = hourStartChange.Value;
+        }
 
 
 
@@ -111,44 +115,42 @@ namespace weekly_planer
             EventStartMin = (int)minStartChange.Value;
             EventEndMin = (int)minEndChange.Value;
 
-
             try
             {
-                newEvent = new MyEvent(EventName, EventDay, EventStartHour, EventStartMin, EventEndHour, EventEndMin, EventDescr, EventLoc, EventDet);
+                newEvent = new MyEvent(EventDay, EventStartHour, EventStartMin, EventEndHour, EventEndMin, EventName, EventDescr, EventLoc, EventDet);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
-            }
-            catch (DurationException ex)
-            {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw new DurationException("The event duration must be at least 30 minutes.");
-            }
-            catch (EventsOverlapseException ex)
-            {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw new EventsOverlapseException("The event overlaps with another event.");
             }
             catch (ReservedNameException ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw new ReservedNameException("This name is already reserved, please choose another one.");
             }
             catch (ReservedTimeException ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw new ReservedTimeException("This time overlaps with another event's 30-minute reservation period. Please choose a different time.");
+            }
+            catch (DurationException ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (EventsOverlapseException ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (ArgumentNullException ex)
             {
                 MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw new ArgumentNullException("");
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw new Exception("An unexpected error occurred while creating the event.");
             }
         }
 
+        
     }
 }

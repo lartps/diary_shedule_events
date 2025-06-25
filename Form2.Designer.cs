@@ -89,6 +89,8 @@
             this.NameChange.Size = new System.Drawing.Size(182, 35);
             this.NameChange.TabIndex = 1;
             this.NameChange.Text = "Справа 1";
+            this.toolTip1.SetToolTip(this.NameChange, "Некоректні імена: порожне, тільки цифри, один символ, тільки символи, лише пробіл" +
+        "и, - будуть замінені на \"Справа 1, 2 і т.д.\"");
             this.NameChange.WordWrap = false;
             // 
             // DetailsChange
@@ -344,6 +346,7 @@
             0,
             0,
             0});
+            this.hourStartChange.ValueChanged += new System.EventHandler(this.hourStartChange_ValueChanged);
             // 
             // hourEndChange
             // 

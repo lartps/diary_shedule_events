@@ -19,6 +19,27 @@ namespace weekly_planer
             GlobalData data = new GlobalData();
             GlobalData.Current_Time1.setTimeHour = int.Parse(set_TimeH.Text);
             GlobalData.Current_Time1.setTimeMin = int.Parse(set_TimeM.Text);
+
+            //foreach (var event1 in GlobalData.AllEvents)
+            //{
+            //    if (event1.IsOnOverlapsTable == true)
+            //    {
+            //        continue;
+            //    }
+            //    else if (event1.Day < GlobalData.Current_Time1.setTimeDay)
+            //    {
+            //        AddEventOnTable(event1, Delay_table);
+            //    }
+            //    else if (event1.Day == GlobalData.Current_Time1.setTimeDay && event1.endHour < GlobalData.Current_Time1.setTimeHour)
+            //    {
+            //        AddEventOnTable(event1, Delay_table);
+
+            //    }
+            //    else if (event1.Day == GlobalData.Current_Time1.setTimeDay && event1.endHour == GlobalData.Current_Time1.setTimeHour && event1.endMin <= GlobalData.Current_Time1.setTimeMin)
+            //    {
+            //        AddEventOnTable(event1, Delay_table);
+            //    }
+            //}
         }
 
         public void Form1_Load(object sender, EventArgs e)
@@ -42,22 +63,6 @@ namespace weekly_planer
             int index = (int)today; // Sunday = 0 ... Saturday = 6
 
             days[index].BackColor = Color.PaleGoldenrod;
-
-
-            //for (int i = 0; i < timeTable.RowCount; i++)
-            //{
-            //    timeTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30)); // высота строки
-
-            //    Label label = new Label();
-            //    label.Dock = DockStyle.Fill;
-            //    label.TextAlign = ContentAlignment.MiddleCenter;
-
-            //    int hour = startHour + i;
-            //    label.Text = (hour < 10 ? "0" : "") + hour + ":00";
-
-            //    timeTable.Controls.Add(label, 0, i);
-            //}
-
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -71,33 +76,29 @@ namespace weekly_planer
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-        // Добавляем блок дела на таблицу недели
-        public void AddPanelToTable(MyEvent e1)
+        // додається блок справи на таблицю неділі
+        private void AddPanelToTable(MyEvent Event)
         {
-            int hourHeight = 32; // высота одного часа в пикселях
-            int dayWidth = 118;  // фиксированая ширина дня
-            int duration = e1.Duration(e1);
-            int y = 16 + hourHeight * (e1.startHour - 4) + ((e1.startMin + 1) / 30) * (hourHeight / 2);
+            int hourHeight = 32; // висота однієї години в пікселях
+            int dayWidth = 118;  // фиксована ширина дня
+            int duration = Event.DurationOfEvent(Event);
+            int y = 16 + hourHeight * (Event.startHour - 4) + ((Event.startMin + 1) / 30) * (hourHeight / 2);
             int height = (duration / 60) * hourHeight + (((duration + 1) % 60) / 30) * (hourHeight / 2);
-
-            string nameP = e1.Name + "_panel";
-            string nameL = e1.Name + "_label";
-            string nameB = e1.Name + "_button";
 
             var days_tables = new[]
             {
+                sunday,
                 monday,
                 tuesday,
                 wednesday,
                 thursday,
                 friday,
-                saturday,
-                sunday
+                saturday
             };
 
             int year = DateTime.Now.Year;
             int month = DateTime.Now.Month;
-            int day = (int)e1.Day;
+            int day = (int)Event.Day;
             DateTime eventDate = new DateTime(year, month, day);
             DayOfWeek dayOfWeek = eventDate.DayOfWeek;
 
@@ -107,68 +108,46 @@ namespace weekly_planer
             {
                 Location = new Point(3, y),
                 Size = new Size(dayWidth, height),
-                BackColor = Color.FromArgb(128, Color.LightGray),
-                BorderStyle = BorderStyle.FixedSingle,
-                Name = nameP
+                BackColor = Color.FromArgb(128, Color.CornflowerBlue),
+                BorderStyle = BorderStyle.FixedSingle
             };
 
-            Label lbl = new Label
+            Label Name_label = new Label
             {
-                Text = e1.Name,
+                Text = Event.Name,
                 Dock = DockStyle.Top,
-                Name = nameL,
+                Font = new Font(Font, FontStyle.Bold)
             };
 
             Button btnDelete = new Button
             {
-                Name = nameB,
                 Dock = DockStyle.Right,
                 Size = new Size(26, 26),
                 Image = global::weekly_planer.Resource2.delete2,
-                UseVisualStyleBackColor = false
+                UseVisualStyleBackColor = false,
             };
 
-            eventPanel.Controls.Add(lbl);
+            // підписка на подію Click за допомогою лямбда-виразу
+            btnDelete.Click += (sender, e) =>
+            {
+                Event.Delete(Event);
+                Event = null; // обнулення посилання
+
+                // видаляється панель, на якій лежить кнопка
+                var parentControl = btnDelete.Parent;
+                if (parentControl != null)
+                {
+                    parentControl.Parent.Controls.Remove(parentControl);
+                    parentControl.Dispose();
+                    parentControl = null;
+                }
+            };
+
+            eventPanel.Controls.Add(Name_label);
             eventPanel.Controls.Add(btnDelete);
             days_tables[index].Controls.Add(eventPanel);
+            Event.EventOnForm = eventPanel;
         }
-
-
-        //private void SetupTable()
-        //{
-        //    var table = new TableLayoutPanel
-        //    {
-        //        Dock = DockStyle.Fill,
-        //        RowCount = 20,
-        //        ColumnCount = 1,
-        //    };
-
-        //    for (int i = 0; i < 3; i++)
-        //    {
-        //        table.RowStyles.Add(new RowStyle(SizeType.Percent, 100f / 20));
-        //    }
-
-        //    table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f));
-
-
-        //    this.Controls.Add(table);
-        //}
-
-        private void Form1_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = e.Graphics;
-
-
-        }
-
-
-
-        //private void timer1_Tick(object sender, EventArgs e)
-        //{
-        //    Timer.Text = DateTime.Now.ToShortTimeString();
-        //    //Refresh();
-        //}
-
         private void Add_Event_Btn_Click(object sender, EventArgs e)
         {
             using (EventForm eventForm1 = new EventForm())
@@ -189,11 +168,6 @@ namespace weekly_planer
             }
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void findBtn_Click(object sender, EventArgs e)
         {
             var searchName = findBtn.Text.Trim();
@@ -209,11 +183,82 @@ namespace weekly_planer
 
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void AddEventOnTable(MyEvent event1, FlowLayoutPanel _table)
+        {
+            Panel eventPanelInTable1 = new Panel
+            {
+                BackColor = Color.FromArgb(128, Color.LightGray),
+                BorderStyle = BorderStyle.FixedSingle,
+                Size = new Size(260, 46),
+                MaximumSize = new Size(260, 46),
+                MinimumSize = new Size(260, 46)
+            };
+            Label Name_label = new Label
+            {
+                Text = event1.Name,
+                Font = new Font(Font, FontStyle.Bold),
+                Location = new Point(3, 1)
+            };
+            Button btnDelete1 = new Button
+            {
+                Dock = DockStyle.Right,
+                Image = global::weekly_planer.Resource2.delete2,
+                UseVisualStyleBackColor = false,
+                Size = new Size(26, 26)
+            };
+            Label Descr_label = new Label
+            {
+                Text = event1.Description,
+                Location = new Point(4, 24)
+            };
+
+            // підписка на подію Click
+            btnDelete1.Click += (sender2, e2) =>
+            {
+                event1.Delete(event1);
+
+                var parentControl1 = btnDelete1.Parent;
+                if (parentControl1 != null)
+                {
+                    parentControl1.Parent.Controls.Remove(parentControl1);
+                    parentControl1.Dispose();
+                    parentControl1 = null;
+                }
+            };
+
+            eventPanelInTable1.Controls.Add(Name_label);
+            eventPanelInTable1.Controls.Add(btnDelete1);
+            eventPanelInTable1.Controls.Add(Descr_label);
+
+            _table.Controls.Add(eventPanelInTable1);
+            event1.EventOnForm.BackColor = Color.FromArgb(128, Color.LightGray);
+        }
+
+        private void set_Time_Click(object sender, EventArgs e)
         {
             GlobalData.Current_Time1.setTimeHour = int.Parse(set_TimeH.Text);
             GlobalData.Current_Time1.setTimeMin = int.Parse(set_TimeM.Text);
-
+            GlobalData.Current_Time1.setTimeDay = int.Parse(set_TimeD.Text);
+            foreach (var event2 in GlobalData.AllEvents)
+            {
+                if (event2.IsOnOverlapsTable == true)
+                {
+                    continue;
+                }
+                else if (event2.Day < GlobalData.Current_Time1.setTimeDay)
+                {
+                    AddEventOnTable(event2, Delay_table);
+                }
+                else if (event2.Day == GlobalData.Current_Time1.setTimeDay && event2.endHour < GlobalData.Current_Time1.setTimeHour)
+                {
+                    AddEventOnTable(event2, Delay_table);
+                    
+                }
+                else if (event2.Day == GlobalData.Current_Time1.setTimeDay && event2.endHour == GlobalData.Current_Time1.setTimeHour && event2.endMin <= GlobalData.Current_Time1.setTimeMin)
+                {
+                    AddEventOnTable(event2, Delay_table);
+                }
+            }
         }
 
         //private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -240,6 +285,6 @@ namespace weekly_planer
 
 
 
-
+        
     }
 }
