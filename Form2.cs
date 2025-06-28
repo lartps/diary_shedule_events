@@ -15,142 +15,246 @@ namespace weekly_planer
 {
     public partial class EventForm : Form
     {
+        public MyEvent newEvent { get; private set; } = null;
+        public MyEvent EditingEvent { get; private set; } = null;
+        public int[] prevTime = new int[5];
+        public string prevName;
+        public bool isEditMode = false;
+        public bool nameChanged = false;
+        public bool timeChanged = false;
+
+        // конструктор для створення події
         public EventForm()
         {
             InitializeComponent();
         }
 
-        public string EventName { get; private set; }
-        public int EventStartHour { get; private set; }
-        public int EventEndHour { get; private set; }
-        public int EventStartMin { get; private set; }
-        public int EventEndMin { get; private set; }
-        public int EventDay { get; private set; }
-        public string EventDescr { get; private set; }
-        public string EventLoc { get; private set; }
-        public string EventDet { get; private set; }
-        public MyEvent newEvent { get; private set; } = null;
+        // для редагування
+        public EventForm(MyEvent eventToEdit)
+        {
+            isEditMode = true;
+            EditingEvent = eventToEdit;
+
+            InitializeComponent();
+        }
+
+        private void EventForm_Load(object sender1, EventArgs e1)
+        {
+            if (isEditMode && EditingEvent != null)
+            {
+                // збереження попередніх значень щоб відслідковувати зміни імені і дати
+                prevName = EditingEvent.Name;
+                int[] prevTime = { EditingEvent.Day, EditingEvent.startHour, EditingEvent.startMin, EditingEvent.endHour, EditingEvent.endMin };
+
+                // заповнення полів значеннями з івенту
+                Name_Change.DataBindings.Add("Text", EditingEvent, "Name");
+                Descr_Change.DataBindings.Add("Text", EditingEvent, "Description");
+                Loc_Change.DataBindings.Add("Text", EditingEvent, "Location");
+                Details_Change.DataBindings.Add("Text", EditingEvent, "Details");
+
+                Day_Change.DataBindings.Add("Value", EditingEvent, "Day");
+                hourStart_Change.DataBindings.Add("Value", EditingEvent, "startHour");
+                minStart_Change.DataBindings.Add("Value", EditingEvent, "startMin");
+                hourEnd_Change.DataBindings.Add("Value", EditingEvent, "endHour");
+                minEnd_Change.DataBindings.Add("Value", EditingEvent, "endMin");
+            }
+            else
+            {
+                Form2_Load(sender1, e1);
+            }
+        }
+
+        // для ствроення
         private void Form2_Load(object sender, EventArgs e)
         {
-            try
+            if (isEditMode == true)
             {
-                DayChange.Value = DateTime.Now.Day;
-                DayChange.Minimum = DayChange.Value;
-
-                hourStartChange.Value = DateTime.Now.Hour;
-                hourStartChange.Minimum = hourStartChange.Value;
-
-                hourEndChange.Value = hourStartChange.Value + 1;
-                hourEndChange.Minimum = hourStartChange.Value;
-
-                minStartChange.Value = DateTime.Now.Minute;
-                minStartChange.Minimum = minStartChange.Value;
-                minEndChange.Value = minStartChange.Value;
+                EventForm_Load(sender, e);
             }
-            catch (ArgumentOutOfRangeException ex)
+            else
             {
-                // Если возникла ошибка, например, из-за некорректного времени, используем значения из GlobalData
-                if (ex != null)
+                try
                 {
-                    DayChange.Value = GlobalData.Current_Time1.setTimeDay;
-                    hourStartChange.Value = GlobalData.Current_Time1.setTimeHour;
-                    hourStartChange.Minimum = hourStartChange.Value;
+                    Day_Change.Value = DateTime.Now.Day;
+                    Day_Change.Minimum = Day_Change.Value;
 
-                    hourEndChange.Value = hourStartChange.Value + 1;
-                    hourEndChange.Minimum = hourStartChange.Value;
+                    hourStart_Change.Value = DateTime.Now.Hour;
+                    hourStart_Change.Minimum = hourStart_Change.Value;
 
-                    minStartChange.Value = GlobalData.Current_Time1.setTimeMin;
-                    minStartChange.Minimum = minStartChange.Value;
-                    minEndChange.Value = minStartChange.Value;
+                    if (hourStart_Change.Value == 23)
+                    {
+                        minEnd_Change.Value = 59;
+                        hourEnd_Change.Value = 23;
+                    }
+                    else
+                    {
+                        hourEnd_Change.Value = hourStart_Change.Value + 1;
+                        hourEnd_Change.Minimum = hourStart_Change.Value;
+
+                        minStart_Change.Value = DateTime.Now.Minute;
+                        minStart_Change.Minimum = minStart_Change.Value;
+
+                        minEnd_Change.Value = minStart_Change.Value;
+                        if (minStart_Change.Value + 30 > 59)
+                        {
+
+                        }
+                        else if (minStart_Change.Value + 30 < 59)
+                        {
+                            minEnd_Change.Minimum = minStart_Change.Value + 30;
+                        }
+                    }
                 }
-                else
+                catch (ArgumentOutOfRangeException ex)
                 {
-                    MessageBox.Show("An unexpected error occurred while loading the form.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // якщо поточний час виходить за межі часу в який можна створити подію, використано мін значення
+                    if (ex != null)
+                    {
+                        hourStart_Change.Value = 4;
+                        hourEnd_Change.Value = 5;
+                        hourEnd_Change.Minimum = 4;
+                        minStart_Change.Value = 0;
+                        minEnd_Change.Value = 0;
+                        minEnd_Change.Minimum = minStart_Change.Value;
+                    }
                 }
             }
-
         }
 
         private void hourEndChange_ValueChanged(object sender, EventArgs e)
         {
-            if (hourStartChange.Value == hourEndChange.Value && minStartChange.Value + 30 < 60)
+            // щоб можна було встановити тривалість меньше години
+            if (hourStart_Change.Value == hourEnd_Change.Value && minStart_Change.Value + 30 < 59)
             {
-                minEndChange.Minimum = minStartChange.Value + 30;
-                minEndChange.Value = minEndChange.Minimum;
+                minEnd_Change.Minimum = minStart_Change.Value + 30;
+                minEnd_Change.Value = minEnd_Change.Minimum;
             }
-            else if (hourStartChange.Value == hourEndChange.Value)
+            else if (hourStart_Change.Value == hourEnd_Change.Value && hourStart_Change.Value != 23) // випадок переходу на наступну годину при доданні 30хв
             {
-                hourEndChange.Minimum = hourStartChange.Value + 1;
-                hourEndChange.Value = hourEndChange.Minimum;
-                minEndChange.Minimum = (minStartChange.Value + 30) - 60;
-                minEndChange.Value = minEndChange.Minimum;
+                hourEnd_Change.Minimum = hourStart_Change.Value + 1;
+                hourEnd_Change.Value = hourEnd_Change.Minimum;
+                minEnd_Change.Minimum = (minStart_Change.Value + 30) - 60;
+                minEnd_Change.Value = minEnd_Change.Minimum;
             }
-
+            else if (hourEnd_Change.Value == 23 && hourEnd_Change.Value == hourStart_Change.Value)
+            {
+                minEnd_Change.Value = 59;
+                minEnd_Change.Minimum = 30;
+                minStart_Change.Minimum = 0;
+            }
         }
 
         private void hourStartChange_ValueChanged(object sender, EventArgs e)
         {
-            hourEndChange.Value = hourStartChange.Value + 1;
-            hourEndChange.Minimum = hourStartChange.Value;
+            minStart_Change.Minimum = 0;
+            if (hourStart_Change.Value == hourEnd_Change.Value && minStart_Change.Value + 30 < 60)
+            {
+                minEnd_Change.Minimum = minStart_Change.Value + 30;
+                minEnd_Change.Value = minEnd_Change.Minimum;
+            }
+            else if (hourStart_Change.Value == hourEnd_Change.Value) // випадок переходу на наступну годину при доданні 30хв
+            {
+                hourEnd_Change.Minimum = hourStart_Change.Value + 1;
+                hourEnd_Change.Value = hourEnd_Change.Minimum;
+                minEnd_Change.Minimum = (minStart_Change.Value + 30) - 60;
+                minEnd_Change.Value = minEnd_Change.Minimum;
+            }
+        }
+        private void DayChange_ValueChanged(object sender, EventArgs e)
+        {
+            Day_Change.Minimum = Day_Change.Value;
+            // при зміні дня значення годин і хвилин скидаються до мінімальних
+            hourStart_Change.Minimum = 4;
+            hourEnd_Change.Minimum = 4;
+            minStart_Change.Minimum = 0;
+            minEnd_Change.Minimum = 0;
         }
 
+        //public event EventHandler OkButtonClicked;
 
-
-
-
-
-
+        //private void okButton_Click(object sender, EventArgs e)
+        //{
+        //    OkButtonClicked?.Invoke(this, EventArgs.Empty);
+        //}
 
         // ok button
-        public void event_edit_btn_ok_Click(object sender, EventArgs e)
+        public void eventEdit_okButton_Click(object sender, EventArgs e)
         {
-            // Сохраняем данные из полей формы
-            EventName = NameChange.Text;
-            EventDescr = DescriptionChange.Text;
-            EventLoc = loc.Text;
-            EventDet = DetailsChange.Text;
-            EventDay = (int)DayChange.Value;
-            EventStartHour = (int)hourStartChange.Value;
-            EventEndHour = (int)hourEndChange.Value;
-            EventStartMin = (int)minStartChange.Value;
-            EventEndMin = (int)minEndChange.Value;
+            if (isEditMode == false)
+            {
+                // зберігаємо данні з полів форми
+                string EventName = Name_Change.Text;
+                string EventDescr = Descr_Change.Text;
+                string EventLoc = Loc_Change.Text;
+                string EventDet = Details_Change.Text;
+                int EventDay = (int)Day_Change.Value;
+                int EventStartHour = (int)hourStart_Change.Value;
+                int EventEndHour = (int)hourEnd_Change.Value;
+                int EventStartMin = (int)minStart_Change.Value;
+                int EventEndMin = (int)minEnd_Change.Value;
 
-            try
-            {
-                newEvent = new MyEvent(EventDay, EventStartHour, EventStartMin, EventEndHour, EventEndMin, EventName, EventDescr, EventLoc, EventDet);
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                try
+                {
+                    newEvent = new MyEvent(EventDay, EventStartHour, EventStartMin, EventEndHour, EventEndMin, EventName, EventDescr, EventLoc, EventDet);
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                catch (ReservedNameException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (ReservedTimeException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (DurationException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (EventsOverlapseException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (ArgumentNullException ex)
+                {
+                    MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (ArgumentException ex)
+                {
+                    MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (ReservedNameException ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (ReservedTimeException ex)
-            {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (DurationException ex)
-            {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (EventsOverlapseException ex)
-            {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (ArgumentNullException ex)
-            {
-                MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (ArgumentException ex)
-            {
-                MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                HandleEditMode(sender, e);
             }
         }
 
-        
+        private void HandleEditMode(object sender1, EventArgs e1)
+        {
+            int day = (int)Day_Change.Value;
+            int hS = (int)hourStart_Change.Value;
+            int hE = (int)hourEnd_Change.Value;
+            int mS = (int)minStart_Change.Value;
+            int mE = (int)minEnd_Change.Value;
+
+            if (Name_Change.Text != prevName)
+            {
+                EditingEvent.Rename(prevName);
+                nameChanged = true; // якщо змінено ім'я то треба переіменувати блок івенту
+            }
+            if (day != prevTime[0] || hS != prevTime[1] || mS != prevTime[2] || hE != prevTime[3] || mE != prevTime[4])
+            {
+                EditingEvent.ChangeTime(day, hS, hE, mS, mE);
+                timeChanged = true;
+            }
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 }

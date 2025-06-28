@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.eventEdit_btn_ok = new System.Windows.Forms.Button();
-            this.NameChange = new System.Windows.Forms.TextBox();
-            this.DetailsChange = new System.Windows.Forms.RichTextBox();
+            this.eventEdit_ok_btn = new System.Windows.Forms.Button();
+            this.Name_Change = new System.Windows.Forms.TextBox();
+            this.Details_Change = new System.Windows.Forms.RichTextBox();
             this.errorMessage = new System.Windows.Forms.ErrorProvider(this.components);
             this.month_label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.justText1 = new System.Windows.Forms.Label();
-            this.DescriptionChange = new System.Windows.Forms.TextBox();
-            this.loc = new System.Windows.Forms.TextBox();
+            this.Descr_Change = new System.Windows.Forms.TextBox();
+            this.Loc_Change = new System.Windows.Forms.TextBox();
             this.name_label1 = new System.Windows.Forms.Label();
             this.day_label2 = new System.Windows.Forms.Label();
             this.timeStart_label4 = new System.Windows.Forms.Label();
@@ -46,65 +46,65 @@
             this.descr_label6 = new System.Windows.Forms.Label();
             this.place_label7 = new System.Windows.Forms.Label();
             this.details_label8 = new System.Windows.Forms.Label();
-            this.minStartChange = new System.Windows.Forms.NumericUpDown();
-            this.minEndChange = new System.Windows.Forms.NumericUpDown();
-            this.DayChange = new System.Windows.Forms.NumericUpDown();
-            this.hourStartChange = new System.Windows.Forms.NumericUpDown();
-            this.hourEndChange = new System.Windows.Forms.NumericUpDown();
+            this.minStart_Change = new System.Windows.Forms.NumericUpDown();
+            this.minEnd_Change = new System.Windows.Forms.NumericUpDown();
+            this.Day_Change = new System.Windows.Forms.NumericUpDown();
+            this.hourStart_Change = new System.Windows.Forms.NumericUpDown();
+            this.hourEnd_Change = new System.Windows.Forms.NumericUpDown();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorMessage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minStartChange)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minEndChange)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DayChange)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hourStartChange)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hourEndChange)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minStart_Change)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minEnd_Change)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Day_Change)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hourStart_Change)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hourEnd_Change)).BeginInit();
             this.SuspendLayout();
             // 
-            // eventEdit_btn_ok
+            // eventEdit_ok_btn
             // 
-            this.eventEdit_btn_ok.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.eventEdit_ok_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.eventEdit_btn_ok.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.eventEdit_btn_ok.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.eventEdit_btn_ok.FlatAppearance.BorderSize = 4;
-            this.eventEdit_btn_ok.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.eventEdit_btn_ok.Location = new System.Drawing.Point(455, 546);
-            this.eventEdit_btn_ok.MaximumSize = new System.Drawing.Size(118, 42);
-            this.eventEdit_btn_ok.MinimumSize = new System.Drawing.Size(118, 42);
-            this.eventEdit_btn_ok.Name = "eventEdit_btn_ok";
-            this.eventEdit_btn_ok.Size = new System.Drawing.Size(118, 42);
-            this.eventEdit_btn_ok.TabIndex = 18;
-            this.eventEdit_btn_ok.Text = "Готово";
-            this.eventEdit_btn_ok.UseVisualStyleBackColor = false;
-            this.eventEdit_btn_ok.Click += new System.EventHandler(this.event_edit_btn_ok_Click);
+            this.eventEdit_ok_btn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.eventEdit_ok_btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.eventEdit_ok_btn.FlatAppearance.BorderSize = 4;
+            this.eventEdit_ok_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.eventEdit_ok_btn.Location = new System.Drawing.Point(455, 546);
+            this.eventEdit_ok_btn.MaximumSize = new System.Drawing.Size(118, 42);
+            this.eventEdit_ok_btn.MinimumSize = new System.Drawing.Size(118, 42);
+            this.eventEdit_ok_btn.Name = "eventEdit_ok_btn";
+            this.eventEdit_ok_btn.Size = new System.Drawing.Size(118, 42);
+            this.eventEdit_ok_btn.TabIndex = 18;
+            this.eventEdit_ok_btn.Text = "Готово";
+            this.eventEdit_ok_btn.UseVisualStyleBackColor = false;
+            this.eventEdit_ok_btn.Click += new System.EventHandler(this.eventEdit_okButton_Click);
             // 
-            // NameChange
+            // Name_Change
             // 
-            this.NameChange.BackColor = System.Drawing.SystemColors.Info;
-            this.NameChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameChange.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.NameChange.Location = new System.Drawing.Point(26, 46);
-            this.NameChange.MaxLength = 11;
-            this.NameChange.Name = "NameChange";
-            this.NameChange.Size = new System.Drawing.Size(182, 35);
-            this.NameChange.TabIndex = 1;
-            this.NameChange.Text = "Справа 1";
-            this.toolTip1.SetToolTip(this.NameChange, "Некоректні імена: порожне, тільки цифри, один символ, тільки символи, лише пробіл" +
+            this.Name_Change.BackColor = System.Drawing.SystemColors.Info;
+            this.Name_Change.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Name_Change.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.Name_Change.Location = new System.Drawing.Point(26, 46);
+            this.Name_Change.MaxLength = 12;
+            this.Name_Change.Name = "Name_Change";
+            this.Name_Change.Size = new System.Drawing.Size(182, 35);
+            this.Name_Change.TabIndex = 1;
+            this.Name_Change.Text = "Справа 1";
+            this.toolTip1.SetToolTip(this.Name_Change, "Некоректні імена: порожне, тільки цифри, один символ, тільки символи, лише пробіл" +
         "и, - будуть замінені на \"Справа 1, 2 і т.д.\"");
-            this.NameChange.WordWrap = false;
+            this.Name_Change.WordWrap = false;
             // 
-            // DetailsChange
+            // Details_Change
             // 
-            this.DetailsChange.BackColor = System.Drawing.SystemColors.Info;
-            this.DetailsChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DetailsChange.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DetailsChange.Location = new System.Drawing.Point(26, 317);
-            this.DetailsChange.MaxLength = 281;
-            this.DetailsChange.MinimumSize = new System.Drawing.Size(547, 223);
-            this.DetailsChange.Name = "DetailsChange";
-            this.DetailsChange.Size = new System.Drawing.Size(547, 223);
-            this.DetailsChange.TabIndex = 9;
-            this.DetailsChange.Text = "";
+            this.Details_Change.BackColor = System.Drawing.SystemColors.Info;
+            this.Details_Change.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Details_Change.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Details_Change.Location = new System.Drawing.Point(26, 317);
+            this.Details_Change.MaxLength = 281;
+            this.Details_Change.MinimumSize = new System.Drawing.Size(547, 223);
+            this.Details_Change.Name = "Details_Change";
+            this.Details_Change.Size = new System.Drawing.Size(547, 223);
+            this.Details_Change.TabIndex = 9;
+            this.Details_Change.Text = "";
             // 
             // errorMessage
             // 
@@ -150,37 +150,37 @@
             this.justText1.TabIndex = 17;
             this.justText1.Text = "--";
             // 
-            // DescriptionChange
+            // Descr_Change
             // 
-            this.DescriptionChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Descr_Change.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.DescriptionChange.BackColor = System.Drawing.SystemColors.Info;
-            this.DescriptionChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DescriptionChange.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DescriptionChange.Location = new System.Drawing.Point(25, 179);
-            this.DescriptionChange.MaximumSize = new System.Drawing.Size(4, 29);
-            this.DescriptionChange.MaxLength = 26;
-            this.DescriptionChange.MinimumSize = new System.Drawing.Size(280, 29);
-            this.DescriptionChange.Name = "DescriptionChange";
-            this.DescriptionChange.Size = new System.Drawing.Size(280, 29);
-            this.DescriptionChange.TabIndex = 7;
-            this.DescriptionChange.WordWrap = false;
+            this.Descr_Change.BackColor = System.Drawing.SystemColors.Info;
+            this.Descr_Change.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Descr_Change.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Descr_Change.Location = new System.Drawing.Point(25, 179);
+            this.Descr_Change.MaximumSize = new System.Drawing.Size(4, 29);
+            this.Descr_Change.MaxLength = 26;
+            this.Descr_Change.MinimumSize = new System.Drawing.Size(280, 29);
+            this.Descr_Change.Name = "Descr_Change";
+            this.Descr_Change.Size = new System.Drawing.Size(280, 29);
+            this.Descr_Change.TabIndex = 7;
+            this.Descr_Change.WordWrap = false;
             // 
-            // loc
+            // Loc_Change
             // 
-            this.loc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Loc_Change.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.loc.BackColor = System.Drawing.SystemColors.Info;
-            this.loc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.loc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.loc.Location = new System.Drawing.Point(26, 245);
-            this.loc.MaximumSize = new System.Drawing.Size(4, 29);
-            this.loc.MaxLength = 26;
-            this.loc.MinimumSize = new System.Drawing.Size(280, 29);
-            this.loc.Name = "loc";
-            this.loc.Size = new System.Drawing.Size(280, 29);
-            this.loc.TabIndex = 8;
-            this.loc.WordWrap = false;
+            this.Loc_Change.BackColor = System.Drawing.SystemColors.Info;
+            this.Loc_Change.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Loc_Change.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Loc_Change.Location = new System.Drawing.Point(26, 245);
+            this.Loc_Change.MaximumSize = new System.Drawing.Size(4, 29);
+            this.Loc_Change.MaxLength = 26;
+            this.Loc_Change.MinimumSize = new System.Drawing.Size(280, 29);
+            this.Loc_Change.Name = "Loc_Change";
+            this.Loc_Change.Size = new System.Drawing.Size(280, 29);
+            this.Loc_Change.TabIndex = 8;
+            this.Loc_Change.WordWrap = false;
             // 
             // name_label1
             // 
@@ -252,141 +252,142 @@
             this.details_label8.TabIndex = 0;
             this.details_label8.Text = "Деталі справи (280 символів)";
             // 
-            // minStartChange
+            // minStart_Change
             // 
-            this.minStartChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.minStartChange.Increment = new decimal(new int[] {
+            this.minStart_Change.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.minStart_Change.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.minStartChange.Location = new System.Drawing.Point(215, 117);
-            this.minStartChange.Maximum = new decimal(new int[] {
+            this.minStart_Change.Location = new System.Drawing.Point(215, 117);
+            this.minStart_Change.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
-            this.minStartChange.MaximumSize = new System.Drawing.Size(52, 0);
-            this.minStartChange.MinimumSize = new System.Drawing.Size(52, 0);
-            this.minStartChange.Name = "minStartChange";
-            this.minStartChange.ReadOnly = true;
-            this.minStartChange.Size = new System.Drawing.Size(52, 29);
-            this.minStartChange.TabIndex = 4;
+            this.minStart_Change.MaximumSize = new System.Drawing.Size(52, 0);
+            this.minStart_Change.MinimumSize = new System.Drawing.Size(52, 0);
+            this.minStart_Change.Name = "minStart_Change";
+            this.minStart_Change.ReadOnly = true;
+            this.minStart_Change.Size = new System.Drawing.Size(52, 29);
+            this.minStart_Change.TabIndex = 4;
             // 
-            // minEndChange
+            // minEnd_Change
             // 
-            this.minEndChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.minEndChange.Increment = new decimal(new int[] {
+            this.minEnd_Change.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.minEnd_Change.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.minEndChange.Location = new System.Drawing.Point(380, 117);
-            this.minEndChange.Maximum = new decimal(new int[] {
+            this.minEnd_Change.Location = new System.Drawing.Point(380, 117);
+            this.minEnd_Change.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
-            this.minEndChange.MaximumSize = new System.Drawing.Size(52, 0);
-            this.minEndChange.MinimumSize = new System.Drawing.Size(52, 0);
-            this.minEndChange.Name = "minEndChange";
-            this.minEndChange.ReadOnly = true;
-            this.minEndChange.Size = new System.Drawing.Size(52, 29);
-            this.minEndChange.TabIndex = 6;
-            this.toolTip1.SetToolTip(this.minEndChange, "Подія може тривати 30 хвилин минімум");
+            this.minEnd_Change.MaximumSize = new System.Drawing.Size(52, 0);
+            this.minEnd_Change.MinimumSize = new System.Drawing.Size(52, 0);
+            this.minEnd_Change.Name = "minEnd_Change";
+            this.minEnd_Change.ReadOnly = true;
+            this.minEnd_Change.Size = new System.Drawing.Size(52, 29);
+            this.minEnd_Change.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.minEnd_Change, "Подія може тривати 30 хвилин минімум");
             // 
-            // DayChange
+            // Day_Change
             // 
-            this.DayChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DayChange.Location = new System.Drawing.Point(27, 117);
-            this.DayChange.Maximum = new decimal(new int[] {
+            this.Day_Change.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Day_Change.Location = new System.Drawing.Point(27, 117);
+            this.Day_Change.Maximum = new decimal(new int[] {
             29,
             0,
             0,
             0});
-            this.DayChange.MaximumSize = new System.Drawing.Size(45, 0);
-            this.DayChange.Minimum = new decimal(new int[] {
+            this.Day_Change.MaximumSize = new System.Drawing.Size(45, 0);
+            this.Day_Change.Minimum = new decimal(new int[] {
             23,
             0,
             0,
             0});
-            this.DayChange.MinimumSize = new System.Drawing.Size(45, 0);
-            this.DayChange.Name = "DayChange";
-            this.DayChange.ReadOnly = true;
-            this.DayChange.Size = new System.Drawing.Size(45, 29);
-            this.DayChange.TabIndex = 2;
-            this.DayChange.Value = new decimal(new int[] {
+            this.Day_Change.MinimumSize = new System.Drawing.Size(45, 0);
+            this.Day_Change.Name = "Day_Change";
+            this.Day_Change.ReadOnly = true;
+            this.Day_Change.Size = new System.Drawing.Size(45, 29);
+            this.Day_Change.TabIndex = 2;
+            this.Day_Change.Value = new decimal(new int[] {
             23,
             0,
             0,
             0});
+            this.Day_Change.ValueChanged += new System.EventHandler(this.DayChange_ValueChanged);
             // 
-            // hourStartChange
+            // hourStart_Change
             // 
-            this.hourStartChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.hourStartChange.Location = new System.Drawing.Point(136, 117);
-            this.hourStartChange.Maximum = new decimal(new int[] {
+            this.hourStart_Change.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.hourStart_Change.Location = new System.Drawing.Point(136, 117);
+            this.hourStart_Change.Maximum = new decimal(new int[] {
             23,
             0,
             0,
             0});
-            this.hourStartChange.MaximumSize = new System.Drawing.Size(52, 0);
-            this.hourStartChange.Minimum = new decimal(new int[] {
+            this.hourStart_Change.MaximumSize = new System.Drawing.Size(52, 0);
+            this.hourStart_Change.Minimum = new decimal(new int[] {
             4,
             0,
             0,
             0});
-            this.hourStartChange.MinimumSize = new System.Drawing.Size(52, 0);
-            this.hourStartChange.Name = "hourStartChange";
-            this.hourStartChange.ReadOnly = true;
-            this.hourStartChange.Size = new System.Drawing.Size(52, 29);
-            this.hourStartChange.TabIndex = 3;
-            this.hourStartChange.Value = new decimal(new int[] {
+            this.hourStart_Change.MinimumSize = new System.Drawing.Size(52, 0);
+            this.hourStart_Change.Name = "hourStart_Change";
+            this.hourStart_Change.ReadOnly = true;
+            this.hourStart_Change.Size = new System.Drawing.Size(52, 29);
+            this.hourStart_Change.TabIndex = 3;
+            this.hourStart_Change.Value = new decimal(new int[] {
             4,
             0,
             0,
             0});
-            this.hourStartChange.ValueChanged += new System.EventHandler(this.hourStartChange_ValueChanged);
+            this.hourStart_Change.ValueChanged += new System.EventHandler(this.hourStartChange_ValueChanged);
             // 
-            // hourEndChange
+            // hourEnd_Change
             // 
-            this.hourEndChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.hourEndChange.Location = new System.Drawing.Point(301, 117);
-            this.hourEndChange.Maximum = new decimal(new int[] {
+            this.hourEnd_Change.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.hourEnd_Change.Location = new System.Drawing.Point(301, 117);
+            this.hourEnd_Change.Maximum = new decimal(new int[] {
             23,
             0,
             0,
             0});
-            this.hourEndChange.MaximumSize = new System.Drawing.Size(52, 0);
-            this.hourEndChange.Minimum = new decimal(new int[] {
+            this.hourEnd_Change.MaximumSize = new System.Drawing.Size(52, 0);
+            this.hourEnd_Change.Minimum = new decimal(new int[] {
             4,
             0,
             0,
             0});
-            this.hourEndChange.MinimumSize = new System.Drawing.Size(52, 0);
-            this.hourEndChange.Name = "hourEndChange";
-            this.hourEndChange.ReadOnly = true;
-            this.hourEndChange.Size = new System.Drawing.Size(52, 29);
-            this.hourEndChange.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.hourEndChange, "Подія може тривати 30 хвилин минімум");
-            this.hourEndChange.Value = new decimal(new int[] {
+            this.hourEnd_Change.MinimumSize = new System.Drawing.Size(52, 0);
+            this.hourEnd_Change.Name = "hourEnd_Change";
+            this.hourEnd_Change.ReadOnly = true;
+            this.hourEnd_Change.Size = new System.Drawing.Size(52, 29);
+            this.hourEnd_Change.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.hourEnd_Change, "Подія може тривати 30 хвилин минімум");
+            this.hourEnd_Change.Value = new decimal(new int[] {
             4,
             0,
             0,
             0});
-            this.hourEndChange.ValueChanged += new System.EventHandler(this.hourEndChange_ValueChanged);
+            this.hourEnd_Change.ValueChanged += new System.EventHandler(this.hourEndChange_ValueChanged);
             // 
             // EventForm
             // 
-            this.AcceptButton = this.eventEdit_btn_ok;
+            this.AcceptButton = this.eventEdit_ok_btn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 611);
-            this.Controls.Add(this.hourEndChange);
-            this.Controls.Add(this.hourStartChange);
-            this.Controls.Add(this.DayChange);
-            this.Controls.Add(this.minEndChange);
-            this.Controls.Add(this.minStartChange);
+            this.Controls.Add(this.hourEnd_Change);
+            this.Controls.Add(this.hourStart_Change);
+            this.Controls.Add(this.Day_Change);
+            this.Controls.Add(this.minEnd_Change);
+            this.Controls.Add(this.minStart_Change);
             this.Controls.Add(this.details_label8);
             this.Controls.Add(this.place_label7);
             this.Controls.Add(this.descr_label6);
@@ -394,42 +395,42 @@
             this.Controls.Add(this.timeStart_label4);
             this.Controls.Add(this.day_label2);
             this.Controls.Add(this.name_label1);
-            this.Controls.Add(this.loc);
-            this.Controls.Add(this.DescriptionChange);
+            this.Controls.Add(this.Loc_Change);
+            this.Controls.Add(this.Descr_Change);
             this.Controls.Add(this.justText1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.month_label3);
-            this.Controls.Add(this.DetailsChange);
-            this.Controls.Add(this.NameChange);
-            this.Controls.Add(this.eventEdit_btn_ok);
+            this.Controls.Add(this.Details_Change);
+            this.Controls.Add(this.Name_Change);
+            this.Controls.Add(this.eventEdit_ok_btn);
             this.MinimumSize = new System.Drawing.Size(620, 650);
             this.Name = "EventForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Форма для події";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorMessage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minStartChange)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minEndChange)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DayChange)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hourStartChange)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hourEndChange)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minStart_Change)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minEnd_Change)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Day_Change)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hourStart_Change)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hourEnd_Change)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        public System.Windows.Forms.TextBox NameChange;
-        public System.Windows.Forms.NumericUpDown minStartChange;
-        public System.Windows.Forms.NumericUpDown hourEndChange;
-        public System.Windows.Forms.NumericUpDown hourStartChange;
-        public System.Windows.Forms.NumericUpDown DayChange;
-        public System.Windows.Forms.NumericUpDown minEndChange;
+        public System.Windows.Forms.TextBox Name_Change;
+        public System.Windows.Forms.NumericUpDown minStart_Change;
+        public System.Windows.Forms.NumericUpDown hourEnd_Change;
+        public System.Windows.Forms.NumericUpDown hourStart_Change;
+        public System.Windows.Forms.NumericUpDown Day_Change;
+        public System.Windows.Forms.NumericUpDown minEnd_Change;
         private System.Windows.Forms.ErrorProvider errorMessage;
-        public System.Windows.Forms.TextBox DescriptionChange;
-        public System.Windows.Forms.TextBox loc;
-        public System.Windows.Forms.RichTextBox DetailsChange;
+        public System.Windows.Forms.TextBox Descr_Change;
+        public System.Windows.Forms.TextBox Loc_Change;
+        public System.Windows.Forms.RichTextBox Details_Change;
         private System.Windows.Forms.Label month_label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label justText1;
@@ -442,6 +443,6 @@
         private System.Windows.Forms.Label descr_label6;
         private System.Windows.Forms.Label details_label8;
         private System.Windows.Forms.ToolTip toolTip1;
-        public System.Windows.Forms.Button eventEdit_btn_ok;
+        public System.Windows.Forms.Button eventEdit_ok_btn;
     }
 }
