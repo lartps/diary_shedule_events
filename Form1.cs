@@ -180,7 +180,6 @@ namespace weekly_planer
                     {
                         // після закриття форми зміни автоматично попадуть в об'єкт iвенту
                         // вібображення на таблиці оновиться якщо були змінені ім'я або чаc
-                        Event.EventOnForm = eventPanel; // оновлюємо посилання на панель івенту
                         if (EditForm.nameChanged == true)
                         {
                             Name_label.Text = Event.Name;
@@ -213,7 +212,23 @@ namespace weekly_planer
                                     }
                                 }
                             }
+                            if (EditForm.descrChanged && Event.IsOnDelayTable)
+                            {
+                                foreach (Panel p in Delay_table.Controls)
+                                {
+                                    if (p.Name == Event.Name)
+                                    {
+                                        var descrLabel = p.Controls.OfType<Label>().Skip(1).FirstOrDefault();
+                                        if (descrLabel != null)
+                                        {
+                                            descrLabel.Text = Event.Description; // оновлюється текст
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
                         }
+                        Event.EventOnForm = eventPanel; // оновлюємо посилання на панель івенту
                     }
                 }
             };

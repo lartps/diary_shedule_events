@@ -170,12 +170,14 @@ namespace weekly_planer
 
         public void Reserve(MyEvent e1)
         {
-            index[e1.Name] = $"{e1.Day} {e1.startHour}:{e1.startMin}";
+            string nameKey = e1.Name.Trim();
+            index[nameKey] = $"{e1.Day} {e1.startHour}:{e1.startMin}";
         }
 
         public bool IsReserved(MyEvent e1)
         {
-            if (index.ContainsKey(e1.Name))
+            string nameKey = e1.Name.Trim();
+            if (index.ContainsKey(nameKey))
             {
                 throw new ReservedNameException("Справа з такою назвою вже існує");
             }
@@ -218,18 +220,21 @@ namespace weekly_planer
 
         public void Delete(string name)
         {
-            index.Remove(name);
+            string nameKey = name.Trim();
+            index.Remove(nameKey);
         }
 
         // змінити лише значення
         public void Change(string name, int day, int sHour, int sMin)
         {
-            index[name] = $"{day} {sHour}:{sMin}";
+            string nameKey = name.Trim();
+            index[nameKey] = $"{day} {sHour}:{sMin}";
         }
         // змінити тільки ключ або і значення
         public void Change(string prevName, MyEvent e1)
         {
-            if (index.Remove(prevName)) Reserve(e1);
+            string prevKey = prevName.Trim();
+            if (index.Remove(prevKey)) Reserve(e1);
         }
     }
 

@@ -110,7 +110,7 @@ namespace weekly_planer
                             var parts = line.Split('|');
                             if (parts.Length >= 2)
                             {
-                                v1.index[parts[0]] = parts[1];
+                                v1.index[parts[0].Trim()] = parts[1];
                             }
                         }
                     }
