@@ -25,6 +25,9 @@ namespace weekly_planer
             // загружаються збережені данні
             GlobalData.LoadFromFile();
 
+            // Сбрасываем флаг установки времени вручную при запуске
+            GlobalData.IsTimeManuallySet = false;
+
             // відображаються загружені події
             foreach (var loadedEvent in GlobalData.AllEvents)
             {
@@ -182,6 +185,24 @@ namespace weekly_planer
                                 Event.EventOnForm.Dispose();
                             }
                             AddPanel(Event);
+                        }
+                        if (Event.IsOnDelayTable || Event.IsOnOverlapsTable)
+                        {
+                            if (EditForm.descrChanged && Event.IsOnOverlapsTable)
+                            {
+                                foreach (Panel p in Overlaps_table.Controls)
+                                {
+                                    if (p.Name == Event.Name)
+                                    {
+                                        var descrLabel = p.Controls.OfType<Label>().Skip(1).FirstOrDefault();
+                                        if (descrLabel != null)
+                                        {
+                                            descrLabel.Text = Event.Description; // оновлюється текст
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -371,6 +392,19 @@ namespace weekly_planer
             // підписка на подію Click
             btnDelete1.Click += (sender2, e2) =>
             {
+                if (event1.IsOverlappedWith != null)
+                {
+                    foreach (Panel p in Delay_table.Controls)
+                    {
+                        if (p.Name == event1.IsOverlappedWith.Name)
+                        {
+                            Delay_table.Controls.Remove(p);
+                            p.Dispose();
+                            break;
+                        }
+                    }
+                    event1.IsOverlappedWith.IsOverlappedWith = null;
+                }
                 var parentControl1 = btnDelete1.Parent; // панель на якій лежить кнопка
                 parentControl1.Parent.Controls.Remove(parentControl1); // звертаємося до таблиці
                 parentControl1.Dispose(); // видаляємо панель з пам'яті
@@ -380,6 +414,55 @@ namespace weekly_planer
                 event1.EventOnForm.Dispose();
                 event1.EventOnForm = null; // обнулення посилання на панель
                 event1.Delete(event1);
+            };
+
+            eventPanelInTable1.DoubleClick += (sender, e) =>
+            {
+                //EditDblClicked?.Invoke(this, EventArgs.Empty);
+                using (EventForm EditForm = new EventForm(event1))
+                {
+                    EditForm.isEditMode = true;
+
+                    if (EditForm.ShowDialog() == DialogResult.OK)
+                    {
+                        // після закриття форми зміни автоматично попадуть в об'єкт iвенту
+                        // вібображення на таблиці оновиться якщо були змінені ім'я або чаc
+                        event1.EventOnForm = eventPanelInTable1; // оновлюємо посилання на панель івенту
+                        if (EditForm.nameChanged == true)
+                        {
+                            Name_label.Text = event1.Name;
+                        }
+                        if (EditForm.timeChanged == true)
+                        {
+                            // видаляємо стару панель івенту
+                            var parentControl = event1.EventOnForm.Parent;
+                            if (parentControl != null)
+                            {
+                                parentControl.Controls.Remove(event1.EventOnForm);
+                                event1.EventOnForm.Dispose();
+                            }
+                            AddPanel(event1);
+                        }
+                        if (event1.IsOnDelayTable || event1.IsOnOverlapsTable)
+                        {
+                            if (EditForm.descrChanged && event1.IsOnOverlapsTable)
+                            {
+                                foreach (Panel p in Overlaps_table.Controls)
+                                {
+                                    if (p.Name == event1.Name)
+                                    {
+                                        var descrLabel = p.Controls.OfType<Label>().Skip(1).FirstOrDefault();
+                                        if (descrLabel != null)
+                                        {
+                                            descrLabel.Text = event1.Description; // оновлюється текст
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             };
 
             eventPanelInTable1.Controls.Add(btnDelete1);
@@ -405,6 +488,9 @@ namespace weekly_planer
             GlobalData.Current_Time1.setTimeDay = int.Parse(set_TimeD.Text);
             GlobalData.Current_Time1.setTimeHour = int.Parse(set_TimeH.Text);
             GlobalData.Current_Time1.setTimeMin = int.Parse(set_TimeM.Text);
+
+            // Устанавливаем флаг, что время было установлено вручную
+            GlobalData.IsTimeManuallySet = true;
 
             isExpired(GlobalData.Current_Time1.setTimeDay, GlobalData.Current_Time1.setTimeHour, GlobalData.Current_Time1.setTimeMin); // перевірка івентів на просроченість
         }
@@ -437,7 +523,7 @@ namespace weekly_planer
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Просто сохраняем данные при закрытии
+            // збереження данных при виході
             GlobalData.SaveToFile();
         }
     }

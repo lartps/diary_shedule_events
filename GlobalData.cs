@@ -13,6 +13,7 @@ namespace weekly_planer
         static public Validate v1 = new Validate();
         static public List<MyEvent> AllEvents = new List<MyEvent>(); // для сохранения данных по всем делам а потом эту инфу тупо тока сохранять и каждый раз отрисовывать при новом запуске проги
         static public CurrentTime Current_Time1 = new CurrentTime(); // для отображения текущего времени в проге
+        static public bool IsTimeManuallySet = false; // флаг, показывающий, была ли нажата кнопка установки времени
 
         public class CurrentTime
         {
@@ -37,9 +38,9 @@ namespace weekly_planer
 
                     // Сохраняем валидацию
                     writer.WriteLine("VALIDATION:");
-                    foreach (var kvp in v1.index)
+                    foreach (var kwv in v1.index)
                     {
-                        writer.WriteLine($"{kvp.Key}|{kvp.Value}");
+                        writer.WriteLine($"{kwv.Key}|{kwv.Value}");
                     }
                 }
             }
@@ -50,15 +51,12 @@ namespace weekly_planer
             }
         }
 
-        // загрузка з текстового файлу
+        // завантаження з текстового файлу
         public static void LoadFromFile(string filePath = "data.txt")
         {
             try
             {
                 if (!File.Exists(filePath)) return;
-
-                AllEvents.Clear();
-                v1.index.Clear();
 
                 using (StreamReader reader = new StreamReader(filePath))
                 {
@@ -102,7 +100,7 @@ namespace weekly_planer
                                 }
                                 catch
                                 {
-                                    // Пропускаем некорректные записи
+                                    // некорректні записи пропускаються
                                 }
                             }
                         }

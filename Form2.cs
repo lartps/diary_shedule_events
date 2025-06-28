@@ -19,9 +19,11 @@ namespace weekly_planer
         public MyEvent EditingEvent { get; private set; } = null;
         public int[] prevTime = new int[5];
         public string prevName;
+        public string prevDescr;
         public bool isEditMode = false;
         public bool nameChanged = false;
         public bool timeChanged = false;
+        public bool descrChanged = false;
 
         // конструктор для створення події
         public EventForm()
@@ -75,11 +77,24 @@ namespace weekly_planer
             {
                 try
                 {
-                    Day_Change.Value = DateTime.Now.Day;
-                    Day_Change.Minimum = Day_Change.Value;
+                    // Используем время из GlobalData только если оно было установлено вручную
+                    if (GlobalData.IsTimeManuallySet)
+                    {
+                        Day_Change.Value = GlobalData.Current_Time1.setTimeDay;
+                        hourStart_Change.Value = GlobalData.Current_Time1.setTimeHour;
+                        minStart_Change.Value = GlobalData.Current_Time1.setTimeMin;
+                    }
+                    else
+                    {
+                        // Иначе используем текущее системное время
+                        Day_Change.Value = DateTime.Now.Day;
+                        hourStart_Change.Value = DateTime.Now.Hour;
+                        minStart_Change.Value = DateTime.Now.Minute;
+                    }
 
-                    hourStart_Change.Value = DateTime.Now.Hour;
+                    Day_Change.Minimum = Day_Change.Value;
                     hourStart_Change.Minimum = hourStart_Change.Value;
+                    minStart_Change.Minimum = minStart_Change.Value;
 
                     if (hourStart_Change.Value == 23)
                     {
@@ -90,9 +105,6 @@ namespace weekly_planer
                     {
                         hourEnd_Change.Value = hourStart_Change.Value + 1;
                         hourEnd_Change.Minimum = hourStart_Change.Value;
-
-                        minStart_Change.Value = DateTime.Now.Minute;
-                        minStart_Change.Minimum = minStart_Change.Value;
 
                         minEnd_Change.Value = minStart_Change.Value;
                         if (minStart_Change.Value + 30 > 59)
@@ -107,7 +119,7 @@ namespace weekly_planer
                 }
                 catch (ArgumentOutOfRangeException ex)
                 {
-                    // якщо поточний час виходить за межі часу в який можна створити подію, використано мін значення
+                    // якщо поточний час виходить за межі часу в який можна створити подію, використано мінімальні значення
                     if (ex != null)
                     {
                         hourStart_Change.Value = 4;
@@ -251,6 +263,10 @@ namespace weekly_planer
             {
                 EditingEvent.ChangeTime(day, hS, hE, mS, mE);
                 timeChanged = true;
+            }
+            if (Descr_Change.Text != prevDescr)
+            {
+                descrChanged = true;
             }
 
             this.DialogResult = DialogResult.OK;

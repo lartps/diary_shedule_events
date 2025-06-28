@@ -64,11 +64,13 @@ namespace weekly_planer
                 foreach (var existingEvent in GlobalData.AllEvents)
                 {
                     // перевіряються тільки події в той же день
-                    if (existingEvent.Day == this.Day)
+                    if (existingEvent.Day == this.Day && existingEvent.endHour > this.startHour)
                     {
                         // використано метод isOverlayed для перевірки накладання
                         if (this.isOverlayed(existingEvent))
                         {
+                            if (existingEvent.IsOverlappedWith != null)
+                                throw new EventsOverlapseException("У події не може бути більше однієї накладки"); // якщо вже є накладка, то не можна створити нову
                             this.IsOverlappedWith = existingEvent;
                             existingEvent.IsOverlappedWith = this; // встановлюємо накладку в обох подіях
                             break;
@@ -103,12 +105,12 @@ namespace weekly_planer
             }
             if (other.Day == this.Day)
             {
-                if (this.startHour > other.startHour)
+                if (this.startHour > other.startHour || (other.startMin < this.startMin && this.startHour == other.startHour))
                 {
                     try
                     {
-                        int DurationDiffFromStart = DurationOfEvent(this.startHour, other.startHour, this.startMin, other.startMin); // перевірка що різница між початком цього івента і початком другого мінімум 30 хвилин
-                        int OverlapsedDuration = DurationOfEvent(other.startHour, this.endHour, other.startMin, this.endMin); // перевірка що перекриття між цими івентами мінімум 30 хвилин
+                        int DurationDiffFromStart = DurationOfEvent(other.startHour, this.startHour, other.startMin, this.startMin); // перевірка що різница між початком цього івента і початком другого мінімум 30 хвилин
+                        int OverlapsedDuration = DurationOfEvent(other.endHour, this.startHour, other.endMin, this.startMin); // перевірка що перекриття між цими івентами мінімум 30 хвилин. беремо початок іншого івента і кінець цього івента
                         if (DurationDiffFromStart >= 30 && OverlapsedDuration >= 30) return true;
                         else if (OverlapsedDuration < 30) throw new EventsOverlapseException("Перекриття між подіями повинно тривати більше 30 хвилин");
                     }
@@ -117,7 +119,7 @@ namespace weekly_planer
                         throw new ReservedTimeException("Накладка повинна починатися мінімум на 30 хвилин пізніше ніж початок події на яку накладається");
                     }
                 }
-                else if (this.startHour < other.startHour)
+                else if (this.startHour < other.startHour || (this.startMin < other.startMin && this.startHour == other.startHour))
                 {
                     try
                     {
@@ -170,7 +172,6 @@ namespace weekly_planer
                     this.IsOnOverlapsTable = false; // очищаємо флаг для відображення в таблиці накладок
                 }
             }
-
         }
     }
 
@@ -206,14 +207,15 @@ namespace weekly_planer
                     // Перевіряємо, щоб новий час не попадав в 30-хвилинний резерв від початку події яка вже є
                     if (e1.startHour == existingHour && (existingMin + 30 < 60))
                     {
-                        if (e1.startMin == existingMin || existingMin + 30 >= e1.startMin)
+                        if (e1.startMin == existingMin || existingMin + 30 > e1.startMin)
                             throw new ReservedTimeException($"Цей час перекривається з 30-хвилинним зарезервованим періодом від початку іншої події. Подія \"{e1.Name}\" в {e1.Day}.06 {e1.startHour}:{e1.startMin} перекривається з подією в {existingDay}.06 {existingHour}:{existingMin}");
                     }
 
                     // Перевіряємо випадок переходу через час
                     if (existingMin + 30 >= 59)
                     {
-                        int nextMin = (existingMin + 30) % 60;
+
+                        int nextMin = (existingMin + 30 + (existingMin + 30 == 59 ? 1 : 0)) % 60;
 
                         if ((e1.startHour == existingHour + 1 && e1.startMin <= nextMin))
                         {
