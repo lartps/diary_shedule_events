@@ -36,6 +36,9 @@ namespace weekly_planer
         {
             isEditMode = true;
             EditingEvent = eventToEdit;
+            // збереження попередніх значень щоб відслідковувати зміни імені і дати
+            prevName = EditingEvent.Name;
+            prevTime = new int[] { EditingEvent.Day, EditingEvent.startHour, EditingEvent.startMin, EditingEvent.endHour, EditingEvent.endMin };
 
             InitializeComponent();
         }
@@ -44,10 +47,6 @@ namespace weekly_planer
         {
             if (isEditMode && EditingEvent != null)
             {
-                // збереження попередніх значень щоб відслідковувати зміни імені і дати
-                prevName = EditingEvent.Name;
-                int[] prevTime = { EditingEvent.Day, EditingEvent.startHour, EditingEvent.startMin, EditingEvent.endHour, EditingEvent.endMin };
-
                 // заповнення полів значеннями з івенту
                 Name_Change.DataBindings.Add("Text", EditingEvent, "Name");
                 Descr_Change.DataBindings.Add("Text", EditingEvent, "Description");

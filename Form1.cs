@@ -31,6 +31,15 @@ namespace weekly_planer
             foreach (var loadedEvent in GlobalData.AllEvents)
             {
                 AddPanel(loadedEvent);
+                if (loadedEvent.IsOnDelayTable)
+                {
+                    AddEventOnTable(loadedEvent, Delay_table);
+                }
+                if (loadedEvent.IsOnOverlapsTable && loadedEvent.IsOverlappedWith != null)
+                {
+                    AddEventOnTable(loadedEvent, Overlaps_table);
+                    AddEventOnTable(loadedEvent.IsOverlappedWith, Overlaps_table);
+                }
             }
 
             GlobalData.Current_Time1.setTimeDay = int.Parse(set_TimeD.Text);
