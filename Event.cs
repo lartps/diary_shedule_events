@@ -63,7 +63,9 @@ namespace weekly_planer
                 }
                 foreach (var existingEvent in GlobalData.AllEvents)
                 {
-                    // перевіряються тільки події в той же день
+                    // перевіряються тільки події в той же день.
+                    // щоб івенти мали пересічення час кінця верхнього ранішого івенту existingEvent(other) повинен бути меньше(тобто більше тому що в годинах)
+                    // ніж початок пізнішого івенту this
                     if (existingEvent.Day == this.Day && existingEvent.endHour > this.startHour)
                     {
                         // використано метод isOverlayed для перевірки накладання
@@ -89,8 +91,9 @@ namespace weekly_planer
         }
         private int DurationOfEvent(int startHour, int endHour, int startMin, int endMin)
         {
-            if (endHour == startHour && startMin != 0) return startMin - endMin;
+            if (endHour == startHour && startMin != 0) return (startMin - endMin) * (startMin - endMin > 0 ? 1 : (-1));
             int duration = ((((endHour - startHour) * 60) - startMin) + endMin);
+            duration *= (duration > 0 ? 1 : (-1));
             if (duration < 30) throw new DurationException("Подія має тривати не менше 30 хвилин");
             return duration;
         }
@@ -105,26 +108,12 @@ namespace weekly_planer
             }
             if (other.Day == this.Day)
             {
-                if (this.startHour > other.startHour || (other.startMin < this.startMin && this.startHour == other.startHour))
+                if (this.startHour > other.startHour || (this.startHour == other.startHour && this.startMin > other.startMin))
                 {
                     try
                     {
                         int DurationDiffFromStart = DurationOfEvent(other.startHour, this.startHour, other.startMin, this.startMin); // перевірка що різница між початком цього івента і початком другого мінімум 30 хвилин
                         int OverlapsedDuration = DurationOfEvent(other.endHour, this.startHour, other.endMin, this.startMin); // перевірка що перекриття між цими івентами мінімум 30 хвилин. беремо початок іншого івента і кінець цього івента
-                        if (DurationDiffFromStart >= 30 && OverlapsedDuration >= 30) return true;
-                        else if (OverlapsedDuration < 30) throw new EventsOverlapseException("Перекриття між подіями повинно тривати більше 30 хвилин");
-                    }
-                    catch (DurationException)
-                    {
-                        throw new ReservedTimeException("Накладка повинна починатися мінімум на 30 хвилин пізніше ніж початок події на яку накладається");
-                    }
-                }
-                else if (this.startHour < other.startHour || (this.startMin < other.startMin && this.startHour == other.startHour))
-                {
-                    try
-                    {
-                        int DurationDiffFromStart = DurationOfEvent(other.startHour, this.startHour, other.startMin, this.startMin); // перевірка що різница між початком цього івента і початком другого мінімум 30 хвилин
-                        int OverlapsedDuration = DurationOfEvent(this.startHour, other.endHour, this.startMin, other.endMin); // перевірка що перекриття між цими івентами мінімум 30 хвилин
                         if (DurationDiffFromStart >= 30 && OverlapsedDuration >= 30) return true;
                         else if (OverlapsedDuration < 30) throw new EventsOverlapseException("Перекриття між подіями повинно тривати більше 30 хвилин");
                     }

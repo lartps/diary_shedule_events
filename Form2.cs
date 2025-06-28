@@ -122,6 +122,7 @@ namespace weekly_planer
                     // якщо поточний час виходить за межі часу в який можна створити подію, використано мінімальні значення
                     if (ex != null)
                     {
+                        Day_Change.Value = 23; // перший день тижня
                         hourStart_Change.Value = 4;
                         hourEnd_Change.Value = 5;
                         hourEnd_Change.Minimum = 4;

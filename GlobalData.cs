@@ -11,9 +11,12 @@ namespace weekly_planer
     public class GlobalData
     {
         static public Validate v1 = new Validate();
-        static public List<MyEvent> AllEvents = new List<MyEvent>(); // для сохранения данных по всем делам а потом эту инфу тупо тока сохранять и каждый раз отрисовывать при новом запуске проги
-        static public CurrentTime Current_Time1 = new CurrentTime(); // для отображения текущего времени в проге
-        static public bool IsTimeManuallySet = false; // флаг, показывающий, была ли нажата кнопка установки времени
+        // для збереження даних по всім справам
+        static public List<MyEvent> AllEvents = new List<MyEvent>();
+        // для відображення поточного часу
+        static public CurrentTime Current_Time1 = new CurrentTime();
+        // флажок який показує чи була нажата кнопка установки часу вручну
+        static public bool IsTimeManuallySet = false;
 
         public class CurrentTime
         {
@@ -29,14 +32,12 @@ namespace weekly_planer
             {
                 using (StreamWriter writer = new StreamWriter(filePath))
                 {
-                    // Сохраняем события
                     writer.WriteLine("EVENTS:");
                     foreach (var evt in AllEvents)
                     {
                         writer.WriteLine($"{evt.Name}|{evt.Description}|{evt.Location}|{evt.Details}|{evt.Day}|{evt.startHour}|{evt.startMin}|{evt.endHour}|{evt.endMin}");
                     }
 
-                    // Сохраняем валидацию
                     writer.WriteLine("VALIDATION:");
                     foreach (var kwv in v1.index)
                     {

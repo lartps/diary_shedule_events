@@ -25,7 +25,6 @@ namespace weekly_planer
             // загружаються збережені данні
             GlobalData.LoadFromFile();
 
-            // Сбрасываем флаг установки времени вручную при запуске
             GlobalData.IsTimeManuallySet = false;
 
             // відображаються загружені події
@@ -40,8 +39,10 @@ namespace weekly_planer
             
             Timer.Text = DateTime.Now.ToShortTimeString();
             timer1.Start();
+
             // для перевірки івентів на просроченість при загрузці
             isExpired(DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute);
+            isUnExpired(DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute);
 
             // для фарбування поточного дня неділі
             var days = new[]
@@ -108,7 +109,7 @@ namespace weekly_planer
                 Text = Event.Name,
                 Dock = DockStyle.Top
             };
-            // додаємо кнопку видалення збоку, зправа
+            // додаємо кнопку видалення в правій стороні
             Button btnDelete = new Button
             {
                 Dock = DockStyle.Right,
@@ -238,12 +239,12 @@ namespace weekly_planer
 
             if (string.IsNullOrEmpty(searchName))
             {
-                MessageBox.Show("Щоб знайти справу введіть її повне точне ім'я і натисніть \"Пошук\"");
+                MessageBox.Show("Щоб знайти справу введіть її ім'я і натисніть кнопку \"Пошук\" поряд");
                 return;
             }
             else
             {
-                // Поиск по точному совпадению
+                // пошук по точному співпаденню
                 foreach (var existingEvent in GlobalData.AllEvents)
                 {
                     if (existingEvent.Name.Equals(searchName, StringComparison.OrdinalIgnoreCase))
@@ -255,10 +256,9 @@ namespace weekly_planer
 
                             if (EditForm.ShowDialog() == DialogResult.OK)
                             {
-                                // Обновляем отображение если были изменения
+                                // оновити відображення якщо були зміни
                                 if (EditForm.nameChanged == true)
                                 {
-                                    // Обновляем название в панели события
                                     if (existingEvent.EventOnForm != null)
                                     {
                                         var nameLabel = existingEvent.EventOnForm.Controls.OfType<Label>().FirstOrDefault();
@@ -309,7 +309,7 @@ namespace weekly_planer
                             EditForm.isEditMode = true;
                             if (EditForm.ShowDialog() == DialogResult.OK)
                             {
-                                // оновлюється відображення якщо були зміни
+                                // оновлюється відображення якщо були зміни в часі
                                 if (EditForm.nameChanged == true)
                                 {
                                     if (foundEvent.EventOnForm != null)
@@ -392,18 +392,39 @@ namespace weekly_planer
             // підписка на подію Click
             btnDelete1.Click += (sender2, e2) =>
             {
-                if (event1.IsOverlappedWith != null)
+                if (event1.IsOverlappedWith != null && event1.IsOnOverlapsTable)
+                {
+                    foreach (Panel p in Overlaps_table.Controls)
+                    {
+                        // видалити обидві панелі з таблиці перекриттів
+                        if (p.Name == event1.IsOverlappedWith.Name)
+                        {
+                            Overlaps_table.Controls.Remove(p);
+                            p.Dispose();
+                            break;
+                        }
+                        else if (p.Name == event1.Name)
+                        {
+                            Overlaps_table.Controls.Remove(p);
+                            p.Dispose();
+                            break;
+                        }
+                    }
+                    // скидаємо
+                    event1.IsOverlappedWith.IsOverlappedWith = null;
+                    event1.IsOverlappedWith.IsOnOverlapsTable = false;
+                }
+                if (event1.IsOnDelayTable)
                 {
                     foreach (Panel p in Delay_table.Controls)
                     {
-                        if (p.Name == event1.IsOverlappedWith.Name)
+                        if (p.Name == event1.Name)
                         {
                             Delay_table.Controls.Remove(p);
                             p.Dispose();
                             break;
                         }
                     }
-                    event1.IsOverlappedWith.IsOverlappedWith = null;
                 }
                 var parentControl1 = btnDelete1.Parent; // панель на якій лежить кнопка
                 parentControl1.Parent.Controls.Remove(parentControl1); // звертаємося до таблиці
@@ -489,10 +510,12 @@ namespace weekly_planer
             GlobalData.Current_Time1.setTimeHour = int.Parse(set_TimeH.Text);
             GlobalData.Current_Time1.setTimeMin = int.Parse(set_TimeM.Text);
 
-            // Устанавливаем флаг, что время было установлено вручную
+            // встановлюється флаг, що час було встановлено вручну
             GlobalData.IsTimeManuallySet = true;
 
-            isExpired(GlobalData.Current_Time1.setTimeDay, GlobalData.Current_Time1.setTimeHour, GlobalData.Current_Time1.setTimeMin); // перевірка івентів на просроченість
+            // перевірка івентів на просроченість
+            isExpired(GlobalData.Current_Time1.setTimeDay, GlobalData.Current_Time1.setTimeHour, GlobalData.Current_Time1.setTimeMin);
+            isUnExpired(GlobalData.Current_Time1.setTimeDay, GlobalData.Current_Time1.setTimeHour, GlobalData.Current_Time1.setTimeMin);
         }
 
         public void isExpired(int day, int currentHour, int currentMin)
@@ -517,6 +540,48 @@ namespace weekly_planer
                 {
                     AddEventOnTable(event2, Delay_table);
                     event2.IsOnDelayTable = true;
+                }
+            }
+        }
+
+        public void isUnExpired(int day, int currentHour, int currentMin)
+        {
+            // список подій для видалення з таблиці просрочених
+            var eventsToRemove = new List<MyEvent>();
+
+            foreach (var event2 in GlobalData.AllEvents)
+            {
+                if (event2.IsOnDelayTable == true)
+                {
+                    // перевірка чи більший тепер час у просроченого івенту
+                    if (event2.Day > day)
+                    {
+                        eventsToRemove.Add(event2);
+                    }
+                    else if (event2.Day == day && event2.endHour > currentHour)
+                    {
+                        eventsToRemove.Add(event2);
+                    }
+                    else if (event2.Day == day && event2.endHour == currentHour && event2.endMin > currentMin)
+                    {
+                        eventsToRemove.Add(event2);
+                    }
+                }
+            }
+
+            // видаляються події з таблиці просрочених
+            foreach (var eventToRemove in eventsToRemove)
+            {
+                // шукає і видаляє панель з таблиці просрочених
+                foreach (Control control in Delay_table.Controls)
+                {
+                    if (control is Panel panel && panel.Name == eventToRemove.Name)
+                    {
+                        Delay_table.Controls.Remove(panel);
+                        panel.Dispose();
+                        eventToRemove.IsOnDelayTable = false;
+                        break;
+                    }
                 }
             }
         }
